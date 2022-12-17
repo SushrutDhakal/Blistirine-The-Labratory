@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    private float timeStart = 60000; //how long timer 
+    private float timeStart = 60; //how long timer 
     [SerializeField] TextMeshProUGUI textBox;
 
     // Use this for initialization
