@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//new
 public class Slot : MonoBehaviour
 {
     private Inventory inventory;
@@ -14,7 +14,14 @@ public class Slot : MonoBehaviour
 
     private void Update()
     {
-        if (transform.childCount <= 0)
+
+        var childCount = 0;
+        foreach (Transform child in transform)
+        {
+            childCount++;
+        }
+
+        if (childCount <= 0)
         {
             inventory.isFull[index] = false;
         }
