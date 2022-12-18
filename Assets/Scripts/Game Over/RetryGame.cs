@@ -19,6 +19,6 @@ public class RetryGame : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("GameLevelOne");//back to start
+        SceneManager.LoadScene("MainMenu");//back to start
     }
 }
