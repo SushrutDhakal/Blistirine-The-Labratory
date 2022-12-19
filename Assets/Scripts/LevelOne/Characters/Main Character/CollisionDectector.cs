@@ -9,15 +9,18 @@ public class CollisionDectector : MonoBehaviour
 
     void Start()
     {
+        
         changehealth = GameObject.FindGameObjectWithTag("HealthManager").GetComponent<HealthManager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
+
         if (collision.gameObject.tag == "Enemy")
-        {
-            changehealth.TakeDamage(20);
+            {
+                changehealth.TakeDamage(20);
+            }
         }
-    }
 }
 

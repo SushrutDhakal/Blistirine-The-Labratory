@@ -11,7 +11,6 @@ public class Tracker : MonoBehaviour
     public Animator myanimation;
     public SpriteRenderer mysprite;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +67,7 @@ public class Tracker : MonoBehaviour
     {
         moveCharacter(movement);
     }
+    
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
