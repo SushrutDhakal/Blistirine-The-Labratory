@@ -42,7 +42,6 @@ public class Player_Script : MonoBehaviour
             mysprite.flipX = true;
         }
         myrigidbody.velocity = movement * movementSpeed;
-       
 
     }
 }

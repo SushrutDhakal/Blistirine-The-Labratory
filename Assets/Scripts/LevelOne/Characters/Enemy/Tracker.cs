@@ -60,7 +60,6 @@ public class Tracker : MonoBehaviour
             }
         }
 
-
         myanimation.SetFloat("Vertical", anim_y);
         myanimation.SetFloat("Horizontal", anim_x);
     }
@@ -68,6 +67,7 @@ public class Tracker : MonoBehaviour
     {
         moveCharacter(movement);
     }
+    
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));

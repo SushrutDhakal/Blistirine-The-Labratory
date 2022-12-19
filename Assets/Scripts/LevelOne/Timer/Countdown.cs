@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    private float timeStart = 60000; //how long timer 
+    public float timeStart = 60; //how long timer 
     [SerializeField] TextMeshProUGUI textBox;
 
     // Use this for initialization
@@ -22,10 +22,10 @@ public class Countdown : MonoBehaviour
     {
         timeStart -= Time.deltaTime;
         textBox.text = Mathf.Round(timeStart).ToString();
-
+ 
         if (timeStart <= 0)
         {
-            SceneManager.LoadScene("GameOver"); //switch to this scene
+            textBox.text = "";
         }
     }
 }
