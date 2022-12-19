@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//new
+
 public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
@@ -14,7 +14,6 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("SUI");
         if (other.CompareTag("Player"))
         {
             for (int i = 0; i < inventory.slots.Length; i++)
