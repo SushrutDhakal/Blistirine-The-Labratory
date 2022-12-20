@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +23,27 @@ public class HealthManager : MonoBehaviour
             SceneManager.LoadScene("GameOver"); //goes to gameover screen
         }
 
-        if (healthAmount == 20)
+        if (0 < healthAmount && healthAmount < 20)
         {
             healthBar.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
         }
 
-        if (healthAmount == 40)
+        if (20 < healthAmount && healthAmount < 40)
         {
             healthBar.color = new Color(1.0f, 0.5f, 0.0f, 1.0f);
         }
 
-        if (healthAmount == 60)
+        if (40 < healthAmount && healthAmount < 60)
         {
             healthBar.color = new Color(1.0f, 1.0f, 0.0f, 1.0f);
         }
 
-        if (healthAmount == 80)
+        if (60 < healthAmount && healthAmount < 80)
         {
             healthBar.color = new Color(0.5f, 1.0f, 0.0f, 1.0f);
         }
 
-        if (healthAmount == 100)
+        if (80 < healthAmount && healthAmount < 100)
         {
             healthBar.color = new Color(0.0f, 1.0f, 0.0f, 1.0f);//green
         }
