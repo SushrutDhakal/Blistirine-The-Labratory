@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Pickup : MonoBehaviour
+public class SoulPickup : MonoBehaviour
 {
-    private Inventory inventory;
-    public GameObject itemButton;
+    private SoulInv inventory;
+    public GameObject soulButton; 
     [SerializeField] TextMeshProUGUI pickupMessage;
 
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulInv>();
         pickupMessage.gameObject.SetActive(false);
     }
 
@@ -30,19 +30,13 @@ public class Pickup : MonoBehaviour
         {
             Debug.Log("binger");
 
-            for (int i = 0; i < inventory.slots.Length; i++)
+            if (inventory.isFull[0] == false)
             {
-                if (inventory.isFull[i] == false)
-                {
-                    //add item
-                    inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
-
-                    Destroy(gameObject);
-                    break;
-                }
-            }
-            
+                //add item
+                inventory.isFull[0] = true;
+                Instantiate(soulButton, inventory.slots[0].transform, false);
+                Destroy(gameObject);
+            } 
         }
     }
 

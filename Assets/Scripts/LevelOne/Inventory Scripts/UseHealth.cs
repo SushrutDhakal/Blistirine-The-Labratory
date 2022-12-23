@@ -16,9 +16,8 @@ public class UseHealth : MonoBehaviour
 
     public void Use()
     {
-        Instantiate(explosionEffect, player.transform.position, Quaternion.identity);
+        //potion drinking sound
         changehealth.Heal(20);
         Destroy(gameObject);
     }
-
 }
