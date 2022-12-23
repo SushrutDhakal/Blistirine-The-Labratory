@@ -1,33 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    [SerializeField] TextMeshProUGUI pickupMessage;
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        pickupMessage.gameObject.SetActive(false);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) //colliding with player 
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            pickupMessage.gameObject.SetActive(true); ;
+            if (Input.GetKey("e")) //and user enters e
             {
-                if (inventory.isFull[i] == false)
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    //add item
-                    inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    if (inventory.isFull[i] == false)
+                    {
+                        //add item
+                        inventory.isFull[i] = true;
+                        Instantiate(itemButton, inventory.slots[i].transform, false);
 
-                    Destroy(gameObject);
-                    break;
+                        Destroy(gameObject);
+                        break;
+                    }
                 }
             }
         }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Hide the text element
+            pickupMessage.gameObject.SetActive(false);
+        }
+    }
+
+
 }
