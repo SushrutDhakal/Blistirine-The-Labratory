@@ -18,12 +18,6 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-       
-        //this message will activate when it collides with anything
-        //if that is a problem then make the message inside 
-        // other.CompareTag("Player") if statement then make 
-        // Input.GetKey("e") in its own if statement with rest of code 
-
         if (other.CompareTag("Player")) //colliding with player 
         {
             pickupMessage.gameObject.SetActive(true);

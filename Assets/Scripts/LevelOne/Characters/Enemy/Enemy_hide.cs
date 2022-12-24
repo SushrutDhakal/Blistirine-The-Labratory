@@ -14,20 +14,21 @@ public class Enemy_hide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bc.enabled = false;
+        bc.enabled = false; //hide enemy on start 
         mysprite.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(timeStart);
         showEnemy();
     }
 
-    void showEnemy()
+    void showEnemy() 
     {
         TimeStart = Mathf.RoundToInt(countdown.timeStart);
+
+        //if the rounded time is 0, then show the enemy and transform to that position
 
         if (TimeStart == 0)
         {
