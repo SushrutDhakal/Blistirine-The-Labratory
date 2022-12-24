@@ -11,6 +11,10 @@ public class Enemy_hide : MonoBehaviour
     public BoxCollider2D bc;
     int TimeStart;
 
+    float defaultLight = 0.6f;
+    float monsterLight = 0.15f;
+    float midwayLight = 0.37f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +25,9 @@ public class Enemy_hide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(timeStart);
         timeOver();
+        StartCoroutine(lightFlicker());
+
     }
 
     void timeOver()
@@ -31,17 +36,25 @@ public class Enemy_hide : MonoBehaviour
 
         Debug.Log(countdown.timeStart);
 
-        if (countdown.timeStart > 0 && countdown.timeStart < 1)
-        {
-            light2D.intensity = 1f;
-        }
-
         if (TimeStart == 0)
         {
-            light2D.intensity = 0.15f;
+            light2D.intensity = monsterLight;
             bc.enabled = true;
             mysprite.enabled = true;
             tf.position = new Vector3(7.76f, 3.5f, 0);
+        }
+    }
+
+    IEnumerator lightFlicker() //play around with this to change flicker times and stuff
+    {
+        if (countdown.timeStart > 0 && countdown.timeStart < 1f) { 
+            yield return new WaitForSeconds(.5f); //delay 
+            light2D.intensity = midwayLight;
+            yield return new WaitForSeconds(.5f);
+            light2D.intensity = defaultLight;
+            yield return new WaitForSeconds(.5f);
+            light2D.intensity = monsterLight;
+            yield return new WaitForSeconds(.5f);
         }
     }
 }
