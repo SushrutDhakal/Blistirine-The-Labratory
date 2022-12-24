@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
 public class Countdown : MonoBehaviour
 {
     public float timeStart = 60; //how long timer 
@@ -27,6 +26,11 @@ public class Countdown : MonoBehaviour
         {
             textBox.text = "";
         }
+    }
+
+    public void addTime()
+    {
+        timeStart = timeStart + 10;
     }
 }
 

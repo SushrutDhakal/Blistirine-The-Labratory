@@ -33,9 +33,6 @@ public class Enemy_hide : MonoBehaviour
     void timeOver()
     {
         TimeStart = Mathf.RoundToInt(countdown.timeStart);
-
-        Debug.Log(countdown.timeStart);
-
         if (TimeStart == 0)
         {
             light2D.intensity = monsterLight;

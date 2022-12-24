@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3005236630407558566}
   - component: {fileID: 3005236630407558567}
   m_Layer: 0
-  m_Name: HealthPotion Pickup
+  m_Name: Time Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4aad76adf1c995e4bb94df935d035f7b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c655613519ee9804f9c76f5139c28e75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325343d21de766649b18315ab7ed358c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 8506239708869508563, guid: 392da72d4684ae1488b934f68fd5c7cb, type: 3}
+  itemButton: {fileID: 8506239708869508563, guid: 593962aba612c5d4aa234e6d252cbbca, type: 3}
   pickupMessage: {fileID: 5221789775319417909, guid: b7fa179bde7a2cb4a8298b7d386dad9d, type: 3}
 --- !u!58 &3005236630407558567
 CircleCollider2D:
