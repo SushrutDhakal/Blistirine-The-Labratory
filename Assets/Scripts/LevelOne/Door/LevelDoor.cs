@@ -13,10 +13,5 @@ public class LevelDoor : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
         }
-
-        if (other.CompareTag("Player")) //colliding with player 
-        {
-            Debug.Log("fonger");
-        }
     }
 }
