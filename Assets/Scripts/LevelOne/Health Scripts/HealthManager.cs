@@ -48,16 +48,6 @@ public class HealthManager : MonoBehaviour
             healthBar.color = new Color(0.0f, 1.0f, 0.0f, 1.0f);//green
         } */
 
-
-        if (Input.GetKeyDown(KeyCode.Return))  //replace with enemy collision
-        {
-            TakeDamage(20);//how much damage player takes  
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))//replace with potion effect
-        {
-            Heal(20);
-        }
     }
 
     public void TakeDamage(float damage)

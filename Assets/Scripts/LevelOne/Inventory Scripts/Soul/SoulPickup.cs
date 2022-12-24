@@ -18,25 +18,19 @@ public class SoulPickup : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        pickupMessage.gameObject.SetActive(true); ;
-
-        //this message will activate when it collides with anything
-        //if that is a problem then make the message inside 
-        // other.CompareTag("Player") if statement then make 
-        // Input.GetKey("e") in its own if statement with rest of code 
-
-
-        if (other.CompareTag("Player") && Input.GetKey("e")) //colliding with player 
+        if (other.CompareTag("Player")) //colliding with player 
         {
-            Debug.Log("binger");
-
-            if (inventory.isFull[0] == false)
+            pickupMessage.gameObject.SetActive(true);
+            if (Input.GetKey("e"))
             {
-                //add item
-                inventory.isFull[0] = true;
-                Instantiate(soulButton, inventory.slots[0].transform, false);
-                Destroy(gameObject);
-            } 
+                if (inventory.isFull[0] == false)
+                {
+                    //add item
+                    inventory.isFull[0] = true;
+                    Instantiate(soulButton, inventory.slots[0].transform, false);
+                    Destroy(gameObject);
+                }
+            }
         }
     }
 
