@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 8506239708869508563, guid: 392da72d4684ae1488b934f68fd5c7cb, type: 3}
-  pickupMessage: {fileID: 5783315632848592250, guid: b7fa179bde7a2cb4a8298b7d386dad9d, type: 3}
+  pickupMessage: {fileID: 5221789775319417909, guid: b7fa179bde7a2cb4a8298b7d386dad9d, type: 3}
 --- !u!58 &3005236630407558567
 CircleCollider2D:
   m_ObjectHideFlags: 0
