@@ -2864,7 +2864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 5
+  timeStart: 500
   textBox: {fileID: 1497680950}
 --- !u!1 &262611477
 GameObject:
