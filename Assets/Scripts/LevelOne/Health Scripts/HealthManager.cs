@@ -23,7 +23,7 @@ public class HealthManager : MonoBehaviour
             SceneManager.LoadScene("GameOver"); //goes to gameover screen
         }
 
-        if (0 < healthAmount && healthAmount < 20)
+        /*if (0 < healthAmount && healthAmount < 20)
         {
             healthBar.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
         }
@@ -46,7 +46,7 @@ public class HealthManager : MonoBehaviour
         if (80 < healthAmount && healthAmount < 100)
         {
             healthBar.color = new Color(0.0f, 1.0f, 0.0f, 1.0f);//green
-        }
+        } */
 
 
         if (Input.GetKeyDown(KeyCode.Return))  //replace with enemy collision
