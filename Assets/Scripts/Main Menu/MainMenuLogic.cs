@@ -13,6 +13,5 @@ public class MainMenuLogic : MonoBehaviour
     public void leaveGame()
     {
         Application.Quit();
-
     }
 }

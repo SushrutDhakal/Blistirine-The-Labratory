@@ -9,7 +9,6 @@ public class CollisionDectector : MonoBehaviour
 
     void Start()
     {
-        
         changehealth = GameObject.FindGameObjectWithTag("HealthManager").GetComponent<HealthManager>();
     }
 

@@ -9,6 +9,9 @@ public class SoulPickup : MonoBehaviour
     private SoulInv inventory;
     public GameObject soulButton; 
     [SerializeField] TextMeshProUGUI pickupMessage;
+    public bool hasKey = false;
+    public bool hasCollided = false;
+    public GameController guess; 
 
     private void Start()
     {
@@ -20,15 +23,23 @@ public class SoulPickup : MonoBehaviour
     {
         if (other.CompareTag("Player")) //colliding with player 
         {
-            pickupMessage.gameObject.SetActive(true);
-            if (Input.GetKey("e"))
-            {
-                if (inventory.isFull[0] == false)
+            hasCollided = true;
+
+            if (guess.correctGuess == true) { 
+
+                pickupMessage.gameObject.SetActive(true);
+                hasCollided = false;
+
+                if (Input.GetKey("e"))
                 {
-                    //add item
-                    inventory.isFull[0] = true;
-                    Instantiate(soulButton, inventory.slots[0].transform, false);
-                    Destroy(gameObject);
+                    if (inventory.isFull[0] == false)
+                    {
+                        //add item
+                        inventory.isFull[0] = true;
+                        hasKey = true; 
+                        Instantiate(soulButton, inventory.slots[0].transform, false);
+                        Destroy(gameObject);
+                    }
                 }
             }
         }
@@ -39,6 +50,7 @@ public class SoulPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Hide the text element
+            hasCollided = false;
             pickupMessage.gameObject.SetActive(false);
         }
     }

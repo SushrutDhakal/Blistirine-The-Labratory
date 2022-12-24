@@ -6,7 +6,6 @@ public class UseHealth : MonoBehaviour
 {
     HealthManager changehealth;
     private Transform player;
-    public GameObject explosionEffect;
 
     private void Start()
     {
