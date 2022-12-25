@@ -12,7 +12,12 @@ public class MainMenuLogic : MonoBehaviour
 
     public void optionsButton()
     {
-        SceneManager.LoadScene(sceneName: "Options");
+        SceneManager.LoadScene("Options");
+    }
+
+    public void instructionsButton()
+    {
+        SceneManager.LoadScene("Instructions");
     }
 
     public void leaveGame()
