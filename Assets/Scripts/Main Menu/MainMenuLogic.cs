@@ -10,6 +10,11 @@ public class MainMenuLogic : MonoBehaviour
         SceneManager.LoadScene(sceneName: "GameLevelOne");
     }
 
+    public void optionsButton()
+    {
+        SceneManager.LoadScene(sceneName: "Options");
+    }
+
     public void leaveGame()
     {
         Application.Quit();
