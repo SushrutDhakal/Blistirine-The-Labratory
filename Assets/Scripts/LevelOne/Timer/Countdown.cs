@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Countdown : MonoBehaviour
 {
     public float timeStart = 60; //how long timer 
+    public Enemy_hide monster;
     [SerializeField] TextMeshProUGUI textBox;
 
     // Use this for initialization
@@ -30,7 +31,11 @@ public class Countdown : MonoBehaviour
 
     public void addTime()
     {
-        timeStart = timeStart + 10;
+        if (monster.monsterAlive == false)
+        {
+            timeStart = timeStart + 10;
+        }
+        else { }
     }
 }
 

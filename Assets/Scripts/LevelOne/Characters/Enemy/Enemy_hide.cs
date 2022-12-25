@@ -9,6 +9,7 @@ public class Enemy_hide : MonoBehaviour
     public Countdown countdown;
     public Transform tf;
     public BoxCollider2D bc;
+    public bool monsterAlive = false;
     int TimeStart;
 
     float defaultLight = 0.6f;
@@ -35,6 +36,7 @@ public class Enemy_hide : MonoBehaviour
         TimeStart = Mathf.RoundToInt(countdown.timeStart);
         if (TimeStart == 0)
         {
+            monsterAlive = true;
             light2D.intensity = monsterLight;
             bc.enabled = true;
             mysprite.enabled = true;

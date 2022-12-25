@@ -647,11 +647,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You wake up to find out that you have been locked inside a labratory.
-    Your goal is to solve puzzles to escape every room. The movement keys are:\nW
-    - Up\nS - Down\nD - Right\nA - Left\n\nC\u0336a\u0334n\u0337 \u0335y\u0338o\u0335u\u0338
-    \u0338e\u0335s\u0338c\u0336a\u0334p\u0336e\u0338 \u0338t\u0336h\u0338e\u0336
-    \u0335w\u0336r\u0336a\u0335t\u0336h\u0336 \u0336o\u0334f\u0338 B\u0335\u031A\u0314\u031A\u0350\u0351\u033D\u0321e\u0335\u035B\u030F\u033E\u0357\u030A\u0302\u0352\u0343\u0349\u034Dl\u0337\u030E\u0313\u0309\u0301\u0316\u033A\u035Al\u0336\u0314\u0352\u0311\u0360\u0310\u030C\u030E\u0347\u0356\u0322\u0327\u0327\u032F\u0330\u0345\u0329\u0319\u033B\u0332\u0321a\u0337\u0304\u0300\u030E\u035B\u0307\u030B\u0352\u030A\u033F\u0303\u0360\u034E\u0328t\u0337\u030E\u0301\u0342\u0357\u030B\u0340\u034B\u034B\u030A\u0357\u0357\u0321\u032A\u0322\u031D\u0354\u0322\u031D\u031Dr\u0334\u030F\u0350\u034B\u0350\u0303\u0332\u0318\u033Bi\u0334\u030F\u0307\u0344\u034C\u030D\u0315\u0302\u030B\u031A\u0353\u0359\u0326\u0322\u0333\u0328n\u0336\u0310\u031A\u0351\u0352\u0350\u033E\u034B\u031A\u0314\u034C\u030F\u0310\u0320\u032E\u031C\u0354\u0322\u0329\u033Ae\u0337\u0351\u0357\u030B\u034B\u0310\u031B\u0350\u0313\u0316?\u0337\u030A\u0342\u033F\u0346\u0307\u0342\u0344\u031C\u0323\u032D\u0349\u0328\u0326\u0325\u0318\u031F\u0328"
+  m_text: 'You wake up to find out that you have been locked inside a labratory.
+    Your goal is to solve puzzles to escape every room. The movement keys are:
+
+    W
+    - Up
+
+    S - Down
+
+    D - Right
+
+    A - Left
+
+
+    Can you escape the wrath
+    of Blisterine'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
