@@ -15,6 +15,7 @@ public class MainMenuLogic : MonoBehaviour
         SceneManager.LoadScene(sceneName: "Options");
     }
 
+
     public void leaveGame()
     {
         Application.Quit();
