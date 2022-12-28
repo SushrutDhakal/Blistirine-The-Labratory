@@ -10,6 +10,8 @@ public class Tracker : MonoBehaviour
     private Vector2 movement;
     public Animator myanimation;
     public SpriteRenderer mysprite;
+    private bool freeze = false;
+    public Sprite frozone;
 
     // Start is called before the first frame update
     void Start()
@@ -62,14 +64,40 @@ public class Tracker : MonoBehaviour
 
         myanimation.SetFloat("Vertical", anim_y);
         myanimation.SetFloat("Horizontal", anim_x);
+
+        if (freeze == true)
+        {
+            gameObject.GetComponent<Animator>().enabled = false;
+            GetComponent<SpriteRenderer>().sprite = frozone; 
+        }
     }
+
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        StartCoroutine(moveCharacter(movement));
     }
-    
-    void moveCharacter(Vector2 direction)
+
+    public void freezeMonster()
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        freeze = true;
     }
+
+    IEnumerator moveCharacter(Vector2 direction)
+    {
+        if (freeze == false)
+        {
+            gameObject.GetComponent<Animator>().enabled = true;
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        }
+
+        if (freeze == true) //frozen
+        {
+            rb.MovePosition((Vector2)transform.position + (direction * 0 * Time.deltaTime));
+            yield return new WaitForSeconds(5); //how long enemy frozen for 
+            freeze = false;
+        }
+    }
+
+
+
 }

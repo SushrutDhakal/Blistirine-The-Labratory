@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CollisionDectector : MonoBehaviour 
-{ 
-    HealthManager changehealth; 
+public class CollisionDectector : MonoBehaviour
+{
+    HealthManager changehealth;
 
     void Start()
     {
@@ -15,8 +15,9 @@ public class CollisionDectector : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
-            {
-                changehealth.TakeDamage(0.8f);
-            }
+        {
+            changehealth.TakeDamage(0.8f);
         }
+    }
+
 }
