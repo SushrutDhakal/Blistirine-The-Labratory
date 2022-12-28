@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6987167512509652470}
   - component: {fileID: 5092341403036392437}
   - component: {fileID: -4887075569739751413}
-  - component: {fileID: 3313462746943634961}
+  - component: {fileID: 3148170036509205494}
   m_Layer: 5
   m_Name: Smoke Button
   m_TagString: Untagged
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3313462746943634961}
-        m_TargetAssemblyTypeName: UseFreeze, Assembly-CSharp
+      - m_Target: {fileID: 3148170036509205494}
+        m_TargetAssemblyTypeName: UseSmoke, Assembly-CSharp
         m_MethodName: Use
         m_Mode: 1
         m_Arguments:
@@ -148,7 +148,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3313462746943634961
+--- !u!114 &3148170036509205494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8506239708869508563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b136ab3c67e9cc047982209f57b43a98, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d60ead8bebf4e841b9182833626be97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 1766543500724786, guid: 412ffeb2d5056ee4eb7ee9c316280259, type: 3}
