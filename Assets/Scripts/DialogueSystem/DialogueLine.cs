@@ -17,10 +17,23 @@ namespace DialogueSystem
         [Header("Text Options")]
         [SerializeField] private float delay;
 
+        [Header("Character Image")]
+        [SerializeField] private Sprite characterSprite;
+        [SerializeField] private Image imageHolder;
+
+        [Header("After Scene")]
+        [SerializeField] private string Scene;
+
         private void Awake ()
         {
             textHolder = GetComponent<Text>();
 
+            imageHolder.sprite = characterSprite;
+            imageHolder.preserveAspect = true;
+        }
+
+        private void Start()
+        {
             StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay));
         }
     }
