@@ -13,6 +13,7 @@ public class UseTime : MonoBehaviour
 
     public void Use()
     {
+        SoundManager.PlaySound("time");
         changetime.addTime();
         Destroy(gameObject);
     }

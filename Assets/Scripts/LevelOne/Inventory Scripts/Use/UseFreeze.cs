@@ -13,6 +13,7 @@ public class UseFreeze : MonoBehaviour
 
     public void Use()
     {
+        SoundManager.PlaySound("freeze");
         monster.freezeMonster();
         Destroy(gameObject);
     }

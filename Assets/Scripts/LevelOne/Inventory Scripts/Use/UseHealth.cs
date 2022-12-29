@@ -15,7 +15,7 @@ public class UseHealth : MonoBehaviour
 
     public void Use()
     {
-        //potion drinking sound
+        SoundManager.PlaySound("syringe");
         changehealth.Heal(20);
         Destroy(gameObject);
     }

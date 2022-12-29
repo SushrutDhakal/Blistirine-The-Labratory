@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UseSmoke : MonoBehaviour
 {
-
     public GameObject effect;
     private Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,7 @@ public class UseSmoke : MonoBehaviour
 
     public void Use()
     {
+        SoundManager.PlaySound("smoke");
         Instantiate(effect, player.position, Quaternion.identity);
         Destroy(gameObject);
     }
