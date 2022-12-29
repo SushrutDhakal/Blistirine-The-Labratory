@@ -7,7 +7,7 @@ public class MainMenuLogic : MonoBehaviour
 {
     public void playButton()
     {
-        SceneManager.LoadScene(sceneName: "GameLevelOne");
+        SceneManager.LoadScene(sceneName: "Cutscene");
     }
 
     public void optionsButton()
