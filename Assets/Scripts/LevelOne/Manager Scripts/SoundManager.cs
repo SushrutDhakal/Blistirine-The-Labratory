@@ -43,7 +43,6 @@ public class SoundManager : MonoBehaviour
             case "time":
                 audioSrc.PlayOneShot(timeSound);
                 break;
-
         }
     }
 }
