@@ -4871,9 +4871,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555532803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20129487, y: 0.28751, z: 1}
+  m_LocalScale: {x: 0.20129487, y: 0.28751004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2005829021}
@@ -4881,7 +4881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.9, y: 0}
+  m_AnchoredPosition: {x: -92.900024, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555532805
@@ -11920,7 +11920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: 21?
   textColor: {r: 0.0754447, g: 0, b: 1, a: 1}
-  textFont: {fileID: 12800000, guid: 3750c318f40cab44a97d3a81beaefeb3, type: 3}
+  textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.2
   characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
   imageHolder: {fileID: 1561422083}
@@ -14604,7 +14604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: You Stupid
   textColor: {r: 0.0754447, g: 0, b: 1, a: 1}
-  textFont: {fileID: 12800000, guid: 3750c318f40cab44a97d3a81beaefeb3, type: 3}
+  textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.2
   characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
   imageHolder: {fileID: 2101390014}
@@ -17386,8 +17386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.3, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 5.3, y: -0.6591}
+  m_SizeDelta: {x: 160, y: 30.4625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005829022
 MonoBehaviour:
@@ -17403,7 +17403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: What's 9 + 10?
   textColor: {r: 0.0754447, g: 0, b: 1, a: 1}
-  textFont: {fileID: 12800000, guid: 3750c318f40cab44a97d3a81beaefeb3, type: 3}
+  textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.2
   characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
   imageHolder: {fileID: 555532805}
@@ -17432,7 +17432,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
