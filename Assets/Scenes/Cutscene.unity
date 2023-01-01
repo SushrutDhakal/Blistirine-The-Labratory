@@ -14238,7 +14238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: What the- where am I?
   textColor: {r: 0.0754447, g: 0, b: 1, a: 1}
-  textFont: {fileID: 12800000, guid: 3750c318f40cab44a97d3a81beaefeb3, type: 3}
+  textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.2
   characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
   imageHolder: {fileID: 258378674}
