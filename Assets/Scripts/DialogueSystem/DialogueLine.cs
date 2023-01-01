@@ -21,8 +21,6 @@ namespace DialogueSystem
         [SerializeField] private Sprite characterSprite;
         [SerializeField] private Image imageHolder;
 
-        [Header("After Scene")]
-        [SerializeField] private string Scene;
 
         private void Awake ()
         {
@@ -36,7 +34,8 @@ namespace DialogueSystem
         {
             StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay));
         }
-    }
+
+}
 
     
 }

@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DialogueSystem
 {
     public class DialogueHolder : MonoBehaviour
     {
+        [Header("After Scene")]
+        [SerializeField] public string Scene;
+
         private void Awake()
         {
             StartCoroutine(dialogueSequence());
@@ -20,6 +24,11 @@ namespace DialogueSystem
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished);
             }
             gameObject.SetActive(false);
+            
+            if (! (Scene == ""))
+            {
+                SceneManager.LoadScene(Scene);
+            }
         }
 
         private void Deactivate()

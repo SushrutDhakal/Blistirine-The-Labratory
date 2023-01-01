@@ -18,6 +18,7 @@ public class CollisionDectector : MonoBehaviour
         {
             changehealth.TakeDamage(0.8f);
         }
+        
     }
 
 }
