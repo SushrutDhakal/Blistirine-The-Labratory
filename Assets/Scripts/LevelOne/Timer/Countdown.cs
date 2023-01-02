@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    public float timeStart = 60; //how long timer 
+    public float timeStart = 40; //how long timer 
     public Enemy_hide monster;
     [SerializeField] TextMeshProUGUI textBox;
 

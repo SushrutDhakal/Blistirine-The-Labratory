@@ -11,7 +11,7 @@ public class SoulPickup : MonoBehaviour
     [SerializeField] TextMeshProUGUI pickupMessage;
     public bool hasKey = false;
     public bool hasCollided = false;
-    public GameController guess; 
+    public GameManager guess; 
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class SoulPickup : MonoBehaviour
         {
             hasCollided = true;
 
-            if (guess.correctGuess == true) { 
+            if (guess.puzzleSolved == true) { 
 
                 pickupMessage.gameObject.SetActive(true);
                 hasCollided = false;

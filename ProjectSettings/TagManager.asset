@@ -7,6 +7,7 @@ TagManager:
   - HealthManager
   - Enemy
   - Timer
+  - PuzzleTable
   layers:
   - Default
   - TransparentFX
