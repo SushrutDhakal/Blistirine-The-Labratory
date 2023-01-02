@@ -39,7 +39,7 @@ public class Enemy_hide : MonoBehaviour
         }
     }
 
-    void hideEnemy()
+    public void hideEnemy()
     {
         bc.enabled = false;
         mysprite.enabled = false;

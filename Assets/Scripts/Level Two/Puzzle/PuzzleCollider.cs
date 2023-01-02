@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class PuzzleCollider : MonoBehaviour
 {
-    public GameObject puzzle;
-    private bool first;
+    public GameObject puzzle, collectables;
 
     void Start()
     {
         puzzle.SetActive(false);
     }
 
-    private void OnCollisionStay2D (Collision2D collision)
+    private void OnCollisionEnter2D (Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && first == false)
+        if (collision.gameObject.tag == "Player")
         {
+            collectables.SetActive(false);
             puzzle.SetActive(true);
-            first = true;
         }
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collectables.SetActive(true);
+            puzzle.SetActive(false);
+        }
     }
 
 }

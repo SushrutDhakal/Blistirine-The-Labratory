@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class GameManager : MonoBehaviour
     private bool shuffling = false;
     public bool puzzleSolved = false;
     public GameObject puzzle, accessKey;
+    [SerializeField] TextMeshProUGUI textBox;
 
     // Create the game setup with size x size pieces.
     private void CreateGamePieces(float gapThickness)
@@ -60,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         accessKey.SetActive(false);
         pieces = new List<Transform>();
-        size = 3;
+        size = 2;
         CreateGamePieces(0.01f);
     }
 
@@ -82,6 +85,7 @@ public class GameManager : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit)
             {
+                SoundManager.PlaySound("puzzleMove");
                 // Go through the list, the index tells us the position.
                 for (int i = 0; i < pieces.Count; i++)
                 {
@@ -93,6 +97,7 @@ public class GameManager : MonoBehaviour
                         if (SwapIfValid(i, +size, size)) { break; }
                         if (SwapIfValid(i, -1, 0)) { break; }
                         if (SwapIfValid(i, +1, size - 1)) { break; }
+
                     }
                 }
             }
@@ -141,20 +146,17 @@ public class GameManager : MonoBehaviour
 
         if (CheckCompletion())
         {
-            accessKey.SetActive(true);
-            StartCoroutine(hideText(3));
-            puzzleSolved = true;
-            puzzle.SetActive(false);
-            //text like pick up key and escape
+            StartCoroutine(correct(1));
         }
     }
 
-    private IEnumerator hideText(float duration)
+    private IEnumerator correct(float duration)
     {
         yield return new WaitForSeconds(duration);
-        accessKey.SetActive(false);
+        accessKey.SetActive (true);
+        puzzleSolved = true;
+        puzzle.SetActive (false);
     }
-
 
     // Brute force shuffling.
     private void Shuffle()
