@@ -11,7 +11,7 @@ public class LevelTwoDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && pickup.hasKey == true) //colliding with player 
         {
-            SceneManager.LoadScene(sceneName: "MainMenu");
+            SceneManager.LoadScene(sceneName: "GameLevelThree");
         }
     }
 }

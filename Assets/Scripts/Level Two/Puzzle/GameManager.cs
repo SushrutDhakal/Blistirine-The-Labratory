@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     private int size;
     private bool shuffling = false;
     public bool puzzleSolved = false;
-    public GameObject puzzle, accessKey;
-    [SerializeField] TextMeshProUGUI textBox;
+    public GameObject puzzle;
+    //[SerializeField] TextMeshProUGUI textBox;
 
     // Create the game setup with size x size pieces.
     private void CreateGamePieces(float gapThickness)
@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        accessKey.SetActive(false);
         pieces = new List<Transform>();
         size = 2;
         CreateGamePieces(0.01f);
@@ -153,7 +152,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator correct(float duration)
     {
         yield return new WaitForSeconds(duration);
-        accessKey.SetActive (true);
         puzzleSolved = true;
         puzzle.SetActive (false);
     }
