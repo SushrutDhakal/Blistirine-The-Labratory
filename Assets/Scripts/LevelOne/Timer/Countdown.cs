@@ -22,7 +22,12 @@ public class Countdown : MonoBehaviour
     {
         timeStart -= Time.deltaTime;
         textBox.text = Mathf.Round(timeStart).ToString();
- 
+
+        if ((Mathf.Round(timeStart)) == 5)
+        {
+            Debug.Log("sound");
+            SoundManager.PlaySound("alarm");
+        }
         if (timeStart <= 0)
         {
             textBox.text = "";

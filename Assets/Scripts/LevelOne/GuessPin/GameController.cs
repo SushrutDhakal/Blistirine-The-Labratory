@@ -9,17 +9,14 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private TMP_InputField input;
 
+    [SerializeField] ShowNote password;
+
     private int num;
     private int guessNumber;
     public SoulPickup collision;
     public GameObject inputField;
     [SerializeField] TextMeshProUGUI guessMessage;
     public bool correctGuess = false;
-
-    void Awake()
-    {
-        num = 1234;
-    }
 
     void Start()
     {
@@ -29,6 +26,9 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+
+        num = password.pin;
+
         if (collision.hasCollided == true)
         {
             inputField.SetActive(true);
@@ -46,6 +46,7 @@ public class GameController : MonoBehaviour
         compareGuess(int.Parse(guess));
         input.text = "";
     }
+
 
     void compareGuess(int guess)
     {

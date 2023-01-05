@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     private bool shuffling = false;
     public bool puzzleSolved = false;
     public GameObject puzzle;
-    //[SerializeField] TextMeshProUGUI textBox;
 
     // Create the game setup with size x size pieces.
     private void CreateGamePieces(float gapThickness)
@@ -155,6 +154,7 @@ public class GameManager : MonoBehaviour
         puzzleSolved = true;
         puzzle.SetActive (false);
     }
+
 
     // Brute force shuffling.
     private void Shuffle()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip syringeSound, smokeSound, freezeSound, timeSound, puzzleMove, pressureSound;
+    public static AudioClip syringeSound, smokeSound, freezeSound, timeSound, puzzleMove, pressureSound, alarmSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
         timeSound = Resources.Load<AudioClip>("time");
         puzzleMove = Resources.Load<AudioClip>("puzzleMove");
         pressureSound = Resources.Load<AudioClip>("pressure");
+        alarmSound = Resources.Load<AudioClip>("alarm");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -46,6 +47,10 @@ public class SoundManager : MonoBehaviour
 
             case "pressure":
                 audioSrc.PlayOneShot(pressureSound);
+                break;
+
+            case "alarm":
+                audioSrc.PlayOneShot(alarmSound);
                 break;
         }
     }
