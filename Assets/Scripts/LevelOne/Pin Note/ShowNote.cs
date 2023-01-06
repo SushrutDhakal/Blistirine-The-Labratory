@@ -7,8 +7,7 @@ using TMPro;
 public class ShowNote : MonoBehaviour
 {
     public GameObject Note;
-    public GameObject openNote;
-
+    public GameObject drawerOpen;
 
     [SerializeField]
     public TMP_Text hint;
@@ -33,11 +32,11 @@ public class ShowNote : MonoBehaviour
     void Start()
     {
         Note.SetActive(false);
-        openNote.SetActive(true);
     }
 
     public void showNote()
     {
+        drawerOpen.SetActive(false);
 
         string[] hints = { hintOne, hintTwo, hintThree, hintFour, hintFive };
         int[] pins = { 7317, 6488, 3481, 9265, 3432 };
@@ -45,14 +44,9 @@ public class ShowNote : MonoBehaviour
         int randomHint = Random.Range(0, 5);
         hint.text = hints[randomHint];
         pin = pins[randomHint];
-        openNote.SetActive(false);
+        Debug.Log(pin);
         Note.SetActive(true);
     }
 
-    public void closeNote()
-    {
-        Note.SetActive(false);
-        openNote.SetActive(true);
-    }
 
 }

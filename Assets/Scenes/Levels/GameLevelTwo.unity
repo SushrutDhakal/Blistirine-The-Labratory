@@ -3820,8 +3820,8 @@ MonoBehaviour:
   input: 'Use your wits, don''t be afraid, '
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 482977939}
 --- !u!114 &361198011
 MonoBehaviour:
@@ -4007,7 +4007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4812,7 +4812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5306,8 +5306,8 @@ MonoBehaviour:
   input: 'Solve the puzzle and set the soul free, '
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 838739639}
 --- !u!114 &534420358
 MonoBehaviour:
@@ -7111,7 +7111,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &687701697
@@ -8822,7 +8822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10427,18 +10427,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.0111141205, y: 0.00016343594}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2445126, y: 1.4223397}
   m_EdgeRadius: 0
 --- !u!212 &1071007420
 SpriteRenderer:
@@ -10481,7 +10481,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eade18affe87ca346a9ef14077b40349, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14897,8 +14897,8 @@ MonoBehaviour:
   input: 'Open the door and escape with glee, '
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 1894753988}
 --- !u!114 &1621268243
 MonoBehaviour:
@@ -15081,8 +15081,8 @@ MonoBehaviour:
   input: Freedom is yours, the path is laid!
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 369070453}
 --- !u!114 &1639112343
 MonoBehaviour:
@@ -16548,7 +16548,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

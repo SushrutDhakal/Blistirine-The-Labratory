@@ -25,7 +25,6 @@ public class Countdown : MonoBehaviour
 
         if ((Mathf.Round(timeStart)) == 5)
         {
-            Debug.Log("sound");
             SoundManager.PlaySound("alarm");
         }
         if (timeStart <= 0)

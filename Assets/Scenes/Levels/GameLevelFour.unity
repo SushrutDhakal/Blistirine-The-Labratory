@@ -2716,8 +2716,8 @@ MonoBehaviour:
   input: And hurry up before the alarm rings!
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 1550316945}
 --- !u!114 &226320897
 MonoBehaviour:
@@ -4883,7 +4883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9298,7 +9298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049672699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -648.96, y: -358.7, z: 0}
+  m_LocalPosition: {x: -645.71, y: -358.38, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11116,7 +11116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eade18affe87ca346a9ef14077b40349, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11135,7 +11135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297583084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1799927, y: -1.9700012, z: 0}
+  m_LocalPosition: {x: -6.68, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11176,18 +11176,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0041606426, y: 0.14476296}
+  m_Offset: {x: 0.021734, y: -0.3648721}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9916787, y: 0.86685926}
+  m_Size: {x: 1.2611413, y: 0.5973971}
   m_EdgeRadius: 0
 --- !u!114 &1297583089
 MonoBehaviour:
@@ -11599,8 +11599,8 @@ MonoBehaviour:
   input: The path to freedom is near, Just keep on moving, don't fear.
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 1561422083}
 --- !u!114 &1377134134
 MonoBehaviour:
@@ -13464,7 +13464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13540,7 +13540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14071,8 +14071,8 @@ MonoBehaviour:
   input: 'Escape the lab, spread your wings, '
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 2101390014}
 --- !u!114 &1612334150
 MonoBehaviour:
@@ -14951,8 +14951,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807206589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -649.06, y: -360.46, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -636.67, y: -361.36, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1568561444}
@@ -15009,14 +15009,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 0.25, y: 0.54}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!212 &1807206594
 SpriteRenderer:
@@ -15064,7 +15064,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.25, y: 0.54}
+  m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16864,8 +16864,8 @@ MonoBehaviour:
   input: Step on both the triggers, And watch the door start to quiver,
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.1
-  characterSprite: {fileID: 21300000, guid: f1e1e1b9d0b90cf4bba5e58be8acd0b4, type: 3}
+  delay: 0.03
+  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 555532805}
 --- !u!114 &2005829023
 MonoBehaviour:
@@ -17639,7 +17639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

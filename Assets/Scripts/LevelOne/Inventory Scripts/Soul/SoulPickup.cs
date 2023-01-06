@@ -19,9 +19,9 @@ public class SoulPickup : MonoBehaviour
         pickupMessage.gameObject.SetActive(false);
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
-        if (other.CompareTag("Player")) //colliding with player 
+        if (other.gameObject.tag == "Player") //colliding with player 
         {
             hasCollided = true;
 
@@ -46,9 +46,9 @@ public class SoulPickup : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnCollisionExit2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             // Hide the text element
             hasCollided = false;
