@@ -39,6 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/GameLevelThree.unity
     guid: ec1fb91ac33404b4db16e2f119e6c44e
   - enabled: 1
-    path: Assets/Scenes/Levels/Puzzles/FlowFree.unity
+    path: Assets/Scenes/Levels/Puzzles/WireMatch.unity
     guid: 13c0583eecc1fa946bfc26144b09fe81
   m_configObjects: {}
