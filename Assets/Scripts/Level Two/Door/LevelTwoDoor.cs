@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelTwoDoor : MonoBehaviour
 {
-    public LevelTwoSoulPickup pickup;
+    public GameManager pickup;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && pickup.hasKey == true) //colliding with player 
+        if (other.CompareTag("Player") && pickup.puzzleSolved == true) //colliding with player 
         {
             SceneManager.LoadScene(sceneName: "GameLevelThree");
         }

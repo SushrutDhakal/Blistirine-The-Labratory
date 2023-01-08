@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BoxDetectionScript : MonoBehaviour
 {
-    
-
     void Start ()
     {
         if (MainWire.PuzzleComplete)
@@ -15,7 +13,6 @@ public class BoxDetectionScript : MonoBehaviour
         }
 
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
