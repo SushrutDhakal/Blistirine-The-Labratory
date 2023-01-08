@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ThreeDoor : MonoBehaviour
-{ 
-
+public class ThirdDoor : MonoBehaviour
+{
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && MainWire.PuzzleComplete) //colliding with player 
