@@ -26,6 +26,7 @@ public class MainWire : MonoBehaviour
             SceneManager.LoadScene("GameLevelThree");
             Debug.Log("Success!");
             PuzzleComplete = true;
+            Countdown.resumeData = true;
         }
     }
 

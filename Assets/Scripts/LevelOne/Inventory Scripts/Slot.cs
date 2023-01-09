@@ -6,6 +6,7 @@ public class Slot : MonoBehaviour
 {
     private Inventory inventory;
     public int index;
+    private static Inventory savedData;
 
     private void Start()
     {
@@ -24,6 +25,10 @@ public class Slot : MonoBehaviour
         if (childCount <= 0)
         {
             inventory.isFull[index] = false;
+        }
+        if (!Countdown.resumeData)
+        {
+            savedData = inventory;
         }
     }
 

@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     [SerializeField] TextMeshProUGUI pickupMessage;
+    private static Inventory savedData;
 
     private void Start()
     {

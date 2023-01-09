@@ -12,11 +12,18 @@ public class Tracker : MonoBehaviour
     public SpriteRenderer mysprite;
     private bool freeze = false;
     public Sprite frozone;
+    private static Vector2 copiedPos;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.freezeRotation = true;
+
+        if (Countdown.resumeData)
+        {
+            transform.position = copiedPos;
+            Debug.Log(copiedPos);
+        }
     }
 
     // Update is called once per frame
@@ -29,6 +36,8 @@ public class Tracker : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
         movement = direction;
+
+
 
         if (movement.x < 0)
         {
@@ -64,6 +73,8 @@ public class Tracker : MonoBehaviour
 
         myanimation.SetFloat("Vertical", anim_y);
         myanimation.SetFloat("Horizontal", anim_x);
+
+        copiedPos = transform.position;
 
         if (freeze == true)
         {

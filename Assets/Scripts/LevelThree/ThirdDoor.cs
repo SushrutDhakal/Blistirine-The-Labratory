@@ -10,6 +10,7 @@ public class ThirdDoor : MonoBehaviour
         if (other.CompareTag("Player") && MainWire.PuzzleComplete) //colliding with player 
         {
             SceneManager.LoadScene(sceneName: "GameLevelFour");
+            Countdown.resumeData = false;
         }
     }
 }

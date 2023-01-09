@@ -19,7 +19,10 @@ public class Enemy_hide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hideEnemy();
+        if (!Countdown.resumeData)
+        {
+            hideEnemy();
+        }
     }
 
     // Update is called once per frame
