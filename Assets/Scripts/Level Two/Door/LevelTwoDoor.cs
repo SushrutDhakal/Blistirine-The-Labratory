@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelTwoDoor : MonoBehaviour
 {
-    public GameManager pickup;
+    public GameControl pickup;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
