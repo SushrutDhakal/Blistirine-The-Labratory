@@ -9,7 +9,7 @@ public class AfterPuzzle : MonoBehaviour
     
     void Start()
     {
-        if (MainWire.PuzzleComplete)
+        if (Countdown.resumeData)
         {
             Dialogue = GameObject.Find("Canvas");
             Dialogue = Dialogue.transform.GetChild(5).gameObject;

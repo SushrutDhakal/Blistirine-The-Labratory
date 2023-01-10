@@ -10,12 +10,10 @@ public class MainWire : MonoBehaviour
     
     public int successCount = 4;
     private int onCount = 0;
-    public static bool PuzzleComplete;
 
     private void Awake()
     {
         Instance = this;
-        PuzzleComplete = false;
     }
 
     public void CountChange (int points)
@@ -25,7 +23,6 @@ public class MainWire : MonoBehaviour
         {
             SceneManager.LoadScene("GameLevelThree");
             Debug.Log("Success!");
-            PuzzleComplete = true;
             Countdown.resumeData = true;
         }
     }

@@ -7,7 +7,7 @@ public class BoxDetectionScript : MonoBehaviour
 {
     void Start ()
     {
-        if (MainWire.PuzzleComplete)
+        if (Countdown.resumeData)
         {
             Destroy(this);
         }

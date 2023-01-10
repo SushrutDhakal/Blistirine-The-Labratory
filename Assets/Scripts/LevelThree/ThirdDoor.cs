@@ -7,7 +7,7 @@ public class ThirdDoor : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && MainWire.PuzzleComplete) //colliding with player 
+        if (other.CompareTag("Player") && Countdown.resumeData) //colliding with player 
         {
             SceneManager.LoadScene(sceneName: "GameLevelFour");
             Countdown.resumeData = false;
