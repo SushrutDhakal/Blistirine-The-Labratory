@@ -10,6 +10,7 @@ public class Enemy_hide : MonoBehaviour
     public Transform tf;
     public BoxCollider2D bc;
     public bool monsterAlive = false;
+    public GameObject openVent, closeVent; 
     int TimeStart;
 
     float defaultLight = 0.6f;
@@ -38,6 +39,8 @@ public class Enemy_hide : MonoBehaviour
         TimeStart = Mathf.RoundToInt(countdown.timeStart);
         if (TimeStart == 0)
         {
+            openVent.SetActive(true);
+            closeVent.SetActive(false);
             showEnemy();
         }
     }
