@@ -4,16 +4,52 @@ using UnityEngine;
 
 public class drawer : MonoBehaviour
 {
-    public GameObject opened;
+    public GameObject opened, lockedMessage, tooFar;
+    public MovePainting drawerKey;
+    public drawerCollision touch;
+
+    private bool collide; 
     // Start is called before the first frame update
     void Start()
     {
         opened.SetActive(false);
+        lockedMessage.SetActive(false);
+    }
+
+    void Update()
+    {
+        collide = touch.touchingDrawer;
     }
 
     void OnMouseDown()
     {
-        opened.SetActive(true);
+        if (drawerKey.hasDrawerKey && collide)
+        {
+            opened.SetActive(true);
+        }
 
+        if (!drawerKey.hasDrawerKey && collide)
+        {
+            StartCoroutine(noKeyMessage());
+        }
+
+        if (!collide)
+        {
+            StartCoroutine(tooFarMessage());
+        }
+    }
+
+    IEnumerator noKeyMessage()
+    {
+        lockedMessage.SetActive(true);
+        yield return new WaitForSeconds(2);
+        lockedMessage.SetActive(false);
+    }
+
+    IEnumerator tooFarMessage()
+    {
+        tooFar.SetActive(true);
+        yield return new WaitForSeconds(2);
+        tooFar.SetActive(false);
     }
 }

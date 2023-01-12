@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Pickup : MonoBehaviour
+public class OnePickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
@@ -41,6 +41,7 @@ public class Pickup : MonoBehaviour
 
     void OnMouseDown()
     {
+        Debug.Log("sui");
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -50,8 +51,6 @@ public class Pickup : MonoBehaviour
                 Instantiate(itemButton, inventory.slots[i].transform, false);
 
                 Destroy(gameObject);
-
-                Debug.Log(itemButton);
                 break;
             }
         }

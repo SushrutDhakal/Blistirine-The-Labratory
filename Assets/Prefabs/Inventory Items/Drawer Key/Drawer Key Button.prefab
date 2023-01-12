@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 6987167512509652470}
   - component: {fileID: 5092341403036392437}
   - component: {fileID: -4887075569739751413}
-  - component: {fileID: 3148170036509205494}
   m_Layer: 5
-  m_Name: Smoke Button
+  m_Name: Drawer Key Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69123b4bdd3f41447acd91b180b98052, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2cb267a55e27bd4ab5460219db53d19, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2437a217cfcd642bc33b076c7067d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3005236630407558571, guid: 47135622dbd454b46888a5df3ccd2133, type: 3}
+  item: {fileID: 3005236630407558571, guid: af0aef6b56765f04cbf84f1893be1dbc, type: 3}
 --- !u!114 &-4887075569739751413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,29 +134,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6987167512509652470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3148170036509205494}
-        m_TargetAssemblyTypeName: UseSmoke, Assembly-CSharp
-        m_MethodName: Use
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3148170036509205494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8506239708869508563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d60ead8bebf4e841b9182833626be97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effect: {fileID: 1766543500724786, guid: ade2235b046a85846824a77731cb9191, type: 3}
+      m_Calls: []
