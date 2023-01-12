@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7697867602427499075}
   - component: {fileID: 5766958941323095312}
   m_Layer: 5
-  m_Name: Soul Button
+  m_Name: Soul Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,29 +7,34 @@ using TMPro;
 public class SoulPickup : MonoBehaviour
 {
     private SoulInv inventory;
-    public GameObject soulButton;
-    [SerializeField] TextMeshProUGUI pickupMessage;
+    public GameObject soulButton, keypad;
+    //[SerializeField] TextMeshProUGUI pickupMessage;
+
     public bool hasKey = false;
-    public bool hasCollided = false;
-    public GameController guess;
+    public Keypad guess;
 
     private void Start()
     {
+        keypad.SetActive(false);
+
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulInv>();
-        pickupMessage.gameObject.SetActive(false);
+        //pickupMessage.gameObject.SetActive(false);
     }
+
 
     void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player") //colliding with player 
         {
-            hasCollided = true;
+            keypad.SetActive(true);
 
             if (guess.correctGuess == true)
             {
 
-                pickupMessage.gameObject.SetActive(true);
-                hasCollided = false;
+
+                keypad.SetActive(false);
+
+                //pickupMessage.gameObject.SetActive(true);
 
                 if (Input.GetKey("e"))
                 {
@@ -50,9 +55,10 @@ public class SoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            keypad.SetActive(false);
+
             // Hide the text element
-            hasCollided = false;
-            pickupMessage.gameObject.SetActive(false);
+            //pickupMessage.gameObject.SetActive(false);
         }
     }
 }
