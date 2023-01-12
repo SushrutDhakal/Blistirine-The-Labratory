@@ -20,7 +20,7 @@ public class Enemy_hide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!Countdown.resumeData)
+        if (!Countdown.monsterSpawned)
         {
             hideEnemy();
         }
@@ -29,6 +29,7 @@ public class Enemy_hide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         timeOver();
         StartCoroutine(lightFlicker());
 

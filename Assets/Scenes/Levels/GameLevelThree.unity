@@ -2759,6 +2759,7 @@ GameObject:
   - component: {fileID: 258462203}
   - component: {fileID: 258462209}
   - component: {fileID: 258462210}
+  - component: {fileID: 258462211}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2951,9 +2952,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 40
+  timeStart: 30
   monster: {fileID: 258462209}
   textBox: {fileID: 1497680950}
+--- !u!114 &258462211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258462202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d010a9f6467c2f6419772291da4a670e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lgt2D: {fileID: 944881034}
 --- !u!1 &262611477
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class Tracker : MonoBehaviour
     {
         rb.freezeRotation = true;
 
-        if (Countdown.resumeData)
+        if (Countdown.resumeData && Countdown.monsterSpawned)
         {
             transform.position = copiedPos;
             Debug.Log(copiedPos);

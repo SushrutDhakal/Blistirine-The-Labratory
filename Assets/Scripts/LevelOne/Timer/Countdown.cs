@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Countdown : MonoBehaviour
 {
     public static bool resumeData = false; // Accessible boolean that will be the key to store previous data before switching scenes (Enemy position, timer)
+    public static bool monsterSpawned = false;
     public float timeStart = 40; //how long timer 
     public Enemy_hide monster;
     [SerializeField] TextMeshProUGUI textBox;
@@ -44,6 +45,7 @@ public class Countdown : MonoBehaviour
         if (timeStart <= 0)
         {
             textBox.text = "";
+            monsterSpawned = true;
         }
         //Debug.Log(timeStart);
     }
