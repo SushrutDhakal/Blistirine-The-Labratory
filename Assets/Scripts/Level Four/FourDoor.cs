@@ -5,29 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class FourDoor : MonoBehaviour
 {
-
-    public PressureOne plateOne;
-    public PressureTwo plateTwo;
-
-    private bool canOpen;
+    public FourSoul soul;
+    private bool escape;
 
 
     void Update()
     {
-        if (plateOne.openOne && plateTwo.openTwo)
-        {
-            canOpen = true;
-        }
+        escape = soul.gotSoul;
 
-        else
-        {
-            canOpen = false;
-        }
-      
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && canOpen == true) //colliding with player 
+        if (other.CompareTag("Player") && escape) //colliding with player 
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
         }

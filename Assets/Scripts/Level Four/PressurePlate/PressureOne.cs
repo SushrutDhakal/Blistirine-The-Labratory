@@ -7,17 +7,23 @@ using UnityEngine;
 
 public class PressureOne : MonoBehaviour
 {
-    public bool pressureOne = false;
-    private float timeStart = 100f; //how long they have after pressure plate is touched to escape 
     public bool openOne = false;
+    public bool boxPressOne = false;
+    public bool playerPressOne = false;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("box")) //colliding with player 
+        if (other.CompareTag("Player")) //colliding with player 
         {
-            SoundManager.PlaySound("pressure");
-            timeStart = 100f; //reset timer every time player steps on plate 
-            pressureOne = true;
+            openOne = true;
+            playerPressOne = true;
+        }
+
+        if (other.CompareTag("box"))
+        {
+            openOne = true;
+            boxPressOne = true;
         }
     }
 
@@ -26,24 +32,6 @@ public class PressureOne : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("box")) //colliding with player 
         {
             SoundManager.PlaySound("pressure");
-        }
-    }
-
-    void Update()
-    {
-        if (pressureOne == true)
-        {
-            timeStart -= Time.deltaTime;
-            if (timeStart > 0)
-            {
-                openOne = true;
-            }
-
-            else
-            {
-                openOne = false;
-            }
-
         }
     }
 }

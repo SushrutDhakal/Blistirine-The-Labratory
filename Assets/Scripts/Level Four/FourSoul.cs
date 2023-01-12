@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TwoSoulPickup : MonoBehaviour
+public class FourSoul : MonoBehaviour
 {
     private SoulInv inventory;
-    public GameObject soulButton, soulMessage;
-    public openBook key;
+    public GameObject soulButton, soulMessage, noLever;
+    public pullLever key;
 
     public bool hasKeycard = false;
-    public bool hasSoul = false;
+    public bool gotSoul = false;
+    private bool hasLever;
 
     private void Start()
     {
@@ -20,7 +21,8 @@ public class TwoSoulPickup : MonoBehaviour
 
     void Update()
     {
-        hasKeycard = key.openedBook;
+        hasLever = key.pulledLever;
+        Debug.Log(hasLever);
     }
 
 
@@ -29,7 +31,7 @@ public class TwoSoulPickup : MonoBehaviour
         if (other.gameObject.tag == "Player") //colliding with player 
         {
 
-            if (hasKeycard)
+            if (hasLever)
             {
                 soulMessage.SetActive(true);
                 if (Input.GetKey("e"))
@@ -38,11 +40,16 @@ public class TwoSoulPickup : MonoBehaviour
                     {
                         //add item
                         inventory.isFull[0] = true;
-                        hasSoul = true;
+                        gotSoul = true;
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         Destroy(gameObject);
                     }
                 }
+            }
+
+            else
+            { 
+                noLever.SetActive(true);
             }
         }
     }

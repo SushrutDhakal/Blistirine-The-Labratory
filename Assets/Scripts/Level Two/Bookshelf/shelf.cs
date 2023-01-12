@@ -31,7 +31,6 @@ public class shelf : MonoBehaviour
         {
             StartCoroutine(tooFarMessage());
             shelfOpened.SetActive(false);
-            book.SetActive(false);
         }
     }
 
