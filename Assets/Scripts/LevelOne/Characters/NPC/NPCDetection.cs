@@ -9,6 +9,7 @@ public class NPCDetection : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            Debug.Log("hello");
             Dialogue = GameObject.Find("Canvas");
             Dialogue = Dialogue.transform.GetChild(4).gameObject;
             Dialogue.SetActive(true);

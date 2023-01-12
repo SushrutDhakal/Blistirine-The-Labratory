@@ -4,19 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SoulPickup : MonoBehaviour
+public class TwoSoulPickup : MonoBehaviour
 {
     private SoulInv inventory;
-    public GameObject soulButton, keypad;
+    public GameObject soulButton, soulMessage;
+    public openBook key;
 
-    public bool hasKey = false;
-    public Keypad guess;
+    public bool hasKeycard = false;
+    public bool hasSoul = false;
 
     private void Start()
     {
-        keypad.SetActive(false);
-
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulInv>();
+    }
+
+    void Update()
+    {
+        hasKeycard = key.openedBook;
+        Debug.Log(hasKeycard);
     }
 
 
@@ -24,20 +29,17 @@ public class SoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") //colliding with player 
         {
-            keypad.SetActive(true);
 
-            if (guess.correctGuess == true)
+            if (hasKeycard)
             {
-
-                keypad.SetActive(false);
-
+                soulMessage.SetActive(true);
                 if (Input.GetKey("e"))
                 {
                     if (inventory.isFull[0] == false)
                     {
                         //add item
                         inventory.isFull[0] = true;
-                        hasKey = true;
+                        hasSoul = true;
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         Destroy(gameObject);
                     }
@@ -50,9 +52,7 @@ public class SoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            keypad.SetActive(false);
-
-            // Hide the text element
+            soulMessage.SetActive(false);
         }
     }
 }

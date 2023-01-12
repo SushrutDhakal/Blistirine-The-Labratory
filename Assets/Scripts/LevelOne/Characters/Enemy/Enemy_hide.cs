@@ -8,7 +8,7 @@ public class Enemy_hide : MonoBehaviour
     public SpriteRenderer mysprite;
     public Countdown countdown;
     public Transform tf;
-    public BoxCollider2D bc;
+    public PolygonCollider2D bc;
     public bool monsterAlive = false;
     public GameObject openVent, closeVent; 
     int TimeStart;
@@ -16,6 +16,9 @@ public class Enemy_hide : MonoBehaviour
     float defaultLight = 0.6f;
     float monsterLight = 0.15f;
     float midwayLight = 0.37f;
+
+    float x;
+    float y; 
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +32,10 @@ public class Enemy_hide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         timeOver();
         StartCoroutine(lightFlicker());
+
+        //StartCoroutine(teleporter());
 
     }
 
@@ -58,7 +62,7 @@ public class Enemy_hide : MonoBehaviour
         light2D.intensity = monsterLight;
         bc.enabled = true;
         mysprite.enabled = true;
-        tf.position = new Vector3(7.76f, 3.5f, 0);
+        tf.position = new Vector3(5.87f, 1.2f, 0);
     }
 
     IEnumerator lightFlicker() //play around with this to change flicker times and stuff
@@ -71,6 +75,22 @@ public class Enemy_hide : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             light2D.intensity = monsterLight;
             yield return new WaitForSeconds(.5f);
+        }
+    }
+
+    IEnumerator teleporter() //DUNNO WHY THIS NOT WORKING FIGURE IT OUT 
+    {
+        if (monsterAlive) {
+            x = Random.Range(-7.09f, 6.755f);
+            y = Random.Range(-3f, 1.7f);
+            tf.position = new Vector3(x, y, 0);
+
+            yield return new WaitForSeconds(3); //delay 
+
+            x = Random.Range(-7.09f, 6.755f);
+            y = Random.Range(-3f, 1.7f);
+            tf.position = new Vector3(x, y, 0);
+
         }
     }
 }
