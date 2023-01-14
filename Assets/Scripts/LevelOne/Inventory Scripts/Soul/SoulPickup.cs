@@ -8,6 +8,7 @@ public class SoulPickup : MonoBehaviour
 {
     private SoulInv inventory;
     public GameObject soulButton, keypad;
+    [SerializeField] private TextMeshProUGUI Ans;
 
     public bool hasKey = false;
     public Keypad guess;
@@ -25,6 +26,7 @@ public class SoulPickup : MonoBehaviour
         if (other.gameObject.tag == "Player") //colliding with player 
         {
             keypad.SetActive(true);
+            Ans.text = "";
 
             if (guess.correctGuess == true)
             {

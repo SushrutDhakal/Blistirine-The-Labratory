@@ -7,14 +7,10 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Transform[] pictures;
 
-    [SerializeField]
-    private GameObject winText;
-
     public bool puzzleSolved;
 
     void Start()
     { 
-        winText.SetActive(false);
         puzzleSolved = false;
     }
 
@@ -31,7 +27,6 @@ public class GameControl : MonoBehaviour
             pictures[8].rotation.z == 0)
         {
             puzzleSolved = true;
-            winText.SetActive(true);
         }
     }
 }

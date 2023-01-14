@@ -8,7 +8,7 @@ public class Enemy_hide : MonoBehaviour
     public SpriteRenderer mysprite;
     public Countdown countdown;
     public Transform tf;
-    public PolygonCollider2D bc;
+    public BoxCollider2D bc;
     public bool monsterAlive = false;
     public GameObject openVent, closeVent; 
     int TimeStart;
@@ -34,9 +34,6 @@ public class Enemy_hide : MonoBehaviour
     {
         timeOver();
         StartCoroutine(lightFlicker());
-
-        //StartCoroutine(teleporter());
-
     }
 
     void timeOver()
@@ -75,22 +72,6 @@ public class Enemy_hide : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             light2D.intensity = monsterLight;
             yield return new WaitForSeconds(.5f);
-        }
-    }
-
-    IEnumerator teleporter() //DUNNO WHY THIS NOT WORKING FIGURE IT OUT 
-    {
-        if (monsterAlive) {
-            x = Random.Range(-7.09f, 6.755f);
-            y = Random.Range(-3f, 1.7f);
-            tf.position = new Vector3(x, y, 0);
-
-            yield return new WaitForSeconds(3); //delay 
-
-            x = Random.Range(-7.09f, 6.755f);
-            y = Random.Range(-3f, 1.7f);
-            tf.position = new Vector3(x, y, 0);
-
         }
     }
 }

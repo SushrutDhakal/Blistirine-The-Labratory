@@ -3677,7 +3677,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.018335208, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3688,7 +3688,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.5}
+  m_Size: {x: 0.73796225, y: 1.5}
   m_EdgeRadius: 0
 --- !u!50 &258462206
 Rigidbody2D:
@@ -3811,7 +3811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 3
+  timeStart: 60
   monster: {fileID: 258462209}
   textBox: {fileID: 1497680950}
 --- !u!1 &262611477
@@ -8735,6 +8735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soulButton: {fileID: 7232800246161371114, guid: 0edb890553d437847aa69fb2cb4bf164, type: 3}
   keypad: {fileID: 1261517151}
+  Ans: {fileID: 1037158210}
   hasKey: 0
   guess: {fileID: 1261517153}
 --- !u!61 &687701698
@@ -9749,7 +9750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740809342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23030019, y: -0.9468, z: 0}
+  m_LocalPosition: {x: 3.37, y: -4.37, z: 0}
   m_LocalScale: {x: 0.7228, y: 0.7228, z: 0.7228}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12501,7 +12502,7 @@ GameObject:
   - component: {fileID: 1037158211}
   - component: {fileID: 1037158210}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

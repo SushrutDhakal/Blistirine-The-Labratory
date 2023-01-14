@@ -11,17 +11,22 @@ public class PressureOne : MonoBehaviour
     public bool boxPressOne = false;
     public bool playerPressOne = false;
 
+    public blocker a;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) //colliding with player 
         {
+            a.timeStart = 5;
+            SoundManager.PlaySound("pressure");
             openOne = true;
             playerPressOne = true;
         }
 
         if (other.CompareTag("box"))
         {
+            a.timeStart = 5;
+            SoundManager.PlaySound("pressure");
             openOne = true;
             boxPressOne = true;
         }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class openBook : MonoBehaviour
 {
     public GameObject book, shelfOpened;
+    public GameControl puzzle;
+    public BoxCollider2D bc;
 
     public bool openedBook;
 
@@ -13,5 +15,16 @@ public class openBook : MonoBehaviour
         shelfOpened.SetActive(false);
         book.SetActive(true);
         openedBook = true;
+    }
+
+    void Update()
+    {
+        if (puzzle.puzzleSolved)
+        {
+            bc.enabled = true;
+        }
+
+        else
+        { bc.enabled = false; }
     }
 }

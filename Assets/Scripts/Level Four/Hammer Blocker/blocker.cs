@@ -12,8 +12,7 @@ public class blocker : MonoBehaviour
 
     public hammerPressure hammer;
 
-    private float timeStart = 5; //how long they have after pressure plate is touched to escape 
-
+    public float timeStart = 5; //how long they have after pressure plate is touched to escape 
 
     private bool canOpen;
 
@@ -22,6 +21,7 @@ public class blocker : MonoBehaviour
     {
         if (plateOne.openOne && plateTwo.openTwo)
         {
+            Debug.Log(timeStart);
             timeStart -= Time.deltaTime;
             if (timeStart > 0 )
             {
@@ -34,11 +34,13 @@ public class blocker : MonoBehaviour
             else
             {
                 canOpen = false;
-            }        }
+            }        
+        }
 
         else
         {
-            canOpen= false;
+            
+            canOpen = false;
         }
 
         if (hammer.gotHammer)

@@ -10,6 +10,9 @@ public class TwoSoulPickup : MonoBehaviour
     public GameObject soulButton, soulMessage;
     public openBook key;
 
+    [SerializeField]
+    private GameObject noKeycardText;
+
     public bool hasKeycard = false;
     public bool hasSoul = false;
 
@@ -44,6 +47,11 @@ public class TwoSoulPickup : MonoBehaviour
                     }
                 }
             }
+
+            else
+            {
+                noKeycardText.SetActive(true);
+            }
         }
     }
 
@@ -51,7 +59,10 @@ public class TwoSoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            noKeycardText.SetActive(false);
             soulMessage.SetActive(false);
         }
     }
+
+
 }

@@ -38,7 +38,6 @@ public class Tracker : MonoBehaviour
         movement = direction;
 
 
-
         if (movement.x < 0)
         {
             mysprite.flipX = true;
@@ -108,7 +107,4 @@ public class Tracker : MonoBehaviour
             freeze = false;
         }
     }
-
-
-
 }

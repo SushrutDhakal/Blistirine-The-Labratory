@@ -15,7 +15,7 @@ public class breakLever : MonoBehaviour
             if (!hammer.gotHammer)
             { 
                 broke.SetActive(false);
-                noHammer.SetActive(true);
+                StartCoroutine(showHidetext());
             }
 
             if (hammer.gotHammer)
@@ -23,7 +23,13 @@ public class breakLever : MonoBehaviour
                 glassLever.SetActive(false);
                 noGlassLever.gameObject.SetActive(true);
             }
-        }
-            
+        }     
+    }
+
+    IEnumerator showHidetext()
+    {
+        noHammer.SetActive(true);
+        yield return new WaitForSeconds(1);
+        noHammer.SetActive(false);
     }
 }

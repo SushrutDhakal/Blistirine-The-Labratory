@@ -22,7 +22,6 @@ public class FourSoul : MonoBehaviour
     void Update()
     {
         hasLever = key.pulledLever;
-        Debug.Log(hasLever);
     }
 
 
@@ -58,6 +57,7 @@ public class FourSoul : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            noLever.SetActive(false);
             soulMessage.SetActive(false);
         }
     }
