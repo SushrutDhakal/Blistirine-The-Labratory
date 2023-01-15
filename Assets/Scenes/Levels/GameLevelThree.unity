@@ -3436,9 +3436,9 @@ GameObject:
   - component: {fileID: 258462206}
   - component: {fileID: 258462204}
   - component: {fileID: 258462203}
-  - component: {fileID: 258462209}
   - component: {fileID: 258462210}
   - component: {fileID: 258462211}
+  - component: {fileID: 258462213}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy

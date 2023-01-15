@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_hide : MonoBehaviour
+public class EnemyHideLevelThree : MonoBehaviour
 {
     public UnityEngine.Rendering.Universal.Light2D light2D;
     public SpriteRenderer mysprite;
@@ -10,20 +10,19 @@ public class Enemy_hide : MonoBehaviour
     public Transform tf;
     public BoxCollider2D bc;
     public bool monsterAlive = false;
-    public GameObject openVent, closeVent;
     int TimeStart;
 
     float defaultLight = 0.6f;
     float monsterLight = 0.15f;
     float midwayLight = 0.37f;
 
-    float x;
-    float y;
-
     // Start is called before the first frame update
     void Start()
     {
-        hideEnemy();
+        if (!Countdown.monsterSpawned)
+        {
+            hideEnemy();
+        }
     }
 
     // Update is called once per frame
@@ -40,11 +39,6 @@ public class Enemy_hide : MonoBehaviour
         if (TimeStart == 0)
         {
             showEnemy();
-        }
-
-        if (TimeStart > 0)
-        {
-            hideEnemy();
         }
     }
 

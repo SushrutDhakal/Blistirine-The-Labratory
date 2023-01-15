@@ -2962,8 +2962,6 @@ MonoBehaviour:
   tf: {fileID: 258462208}
   bc: {fileID: 258462205}
   monsterAlive: 0
-  openVent: {fileID: 1196877306}
-  closeVent: {fileID: 466762648}
 --- !u!114 &258462210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,7 +2974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 60
+  timeStart: 5
   monster: {fileID: 258462209}
   textBox: {fileID: 1497680950}
 --- !u!1 &262611477

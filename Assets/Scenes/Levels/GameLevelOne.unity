@@ -3797,8 +3797,6 @@ MonoBehaviour:
   tf: {fileID: 258462208}
   bc: {fileID: 258462205}
   monsterAlive: 0
-  openVent: {fileID: 1266882712}
-  closeVent: {fileID: 1879222961}
 --- !u!114 &258462210
 MonoBehaviour:
   m_ObjectHideFlags: 0

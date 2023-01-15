@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuLogic : MonoBehaviour
-{
+{    
     public void playButton()
     {
         SceneManager.LoadScene(sceneName: "GameLevelOne");
