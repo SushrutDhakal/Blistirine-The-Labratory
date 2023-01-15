@@ -10,11 +10,15 @@ public class Enemy_hide : MonoBehaviour
     public Transform tf;
     public BoxCollider2D bc;
     public bool monsterAlive = false;
+    public GameObject openVent, closeVent;
     int TimeStart;
 
     float defaultLight = 0.6f;
     float monsterLight = 0.15f;
     float midwayLight = 0.37f;
+
+    float x;
+    float y;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,11 @@ public class Enemy_hide : MonoBehaviour
         if (TimeStart == 0)
         {
             showEnemy();
+        }
+
+        if (TimeStart > 0)
+        {
+            hideEnemy();
         }
     }
 

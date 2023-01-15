@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tracker : MonoBehaviour
+public class ThreeTracker : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Transform player;
@@ -12,11 +12,18 @@ public class Tracker : MonoBehaviour
     public SpriteRenderer mysprite;
     private bool freeze = false;
     public Sprite frozone;
+    private static Vector2 copiedPos;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.freezeRotation = true;
+
+        if (Countdown.resumeData && Countdown.monsterSpawned)
+        {
+            transform.position = copiedPos;
+            Debug.Log(copiedPos);
+        }
     }
 
     // Update is called once per frame
@@ -30,12 +37,13 @@ public class Tracker : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
+
         if (movement.x < 0)
         {
             mysprite.flipX = true;
         }
 
-
+               
         if (movement.x > 0)
         {
             mysprite.flipX = false;
@@ -46,7 +54,7 @@ public class Tracker : MonoBehaviour
             anim_x = 1f;
             anim_y = 0f;
         }
-
+        
         if (Mathf.Abs(movement.x) < Mathf.Abs(movement.y))
         {
             if (movement.y > 0)
@@ -54,7 +62,7 @@ public class Tracker : MonoBehaviour
                 anim_x = 0f;
                 anim_y = 1f;
             }
-
+            
             if (movement.y < 0)
             {
                 anim_x = 0f;
@@ -65,10 +73,12 @@ public class Tracker : MonoBehaviour
         myanimation.SetFloat("Vertical", anim_y);
         myanimation.SetFloat("Horizontal", anim_x);
 
+        copiedPos = transform.position;
+
         if (freeze == true)
         {
             gameObject.GetComponent<Animator>().enabled = false;
-            GetComponent<SpriteRenderer>().sprite = frozone;
+            GetComponent<SpriteRenderer>().sprite = frozone; 
         }
     }
 
@@ -97,7 +107,4 @@ public class Tracker : MonoBehaviour
             freeze = false;
         }
     }
-
-
-
 }

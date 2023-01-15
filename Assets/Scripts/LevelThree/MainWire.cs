@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainWire : MonoBehaviour
 {
-    public GameObject Dialogue;
+    public GameObject wires;
     static public MainWire Instance;
     
     public int successCount = 4;
@@ -21,9 +21,8 @@ public class MainWire : MonoBehaviour
         onCount = onCount + points;
         if (onCount == successCount)
         {
-            SceneManager.LoadScene("GameLevelThree");
             Debug.Log("Success!");
-            Countdown.resumeData = true;
+            wires.SetActive(false);
         }
     }
 
