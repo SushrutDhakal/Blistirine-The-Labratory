@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_hide : MonoBehaviour
+public class EnemyHideLevelThree : MonoBehaviour
 {
     public UnityEngine.Rendering.Universal.Light2D light2D;
     public SpriteRenderer mysprite;
@@ -19,7 +19,10 @@ public class Enemy_hide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hideEnemy();
+        if (!Countdown.monsterSpawned)
+        {
+            hideEnemy();
+        }
     }
 
     // Update is called once per frame

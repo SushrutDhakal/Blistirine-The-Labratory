@@ -11,6 +11,7 @@ public class ThirdDoor : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName: "GameLevelFour");
             Countdown.resumeData = false;
+            Countdown.monsterSpawned = false;
         }
     }
 }

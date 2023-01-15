@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_hide : MonoBehaviour
+public class LevelThreeEnemyRemainsScript : MonoBehaviour
 {
     public UnityEngine.Rendering.Universal.Light2D light2D;
     public SpriteRenderer mysprite;
@@ -10,16 +10,23 @@ public class Enemy_hide : MonoBehaviour
     public Transform tf;
     public BoxCollider2D bc;
     public bool monsterAlive = false;
+    public GameObject openVent, closeVent;
     int TimeStart;
 
     float defaultLight = 0.6f;
     float monsterLight = 0.15f;
     float midwayLight = 0.37f;
 
+    float x;
+    float y;
+
     // Start is called before the first frame update
     void Start()
     {
-        hideEnemy();
+        if (!Countdown.monsterSpawned)
+        {
+            hideEnemy();
+        }
     }
 
     // Update is called once per frame
@@ -27,7 +34,6 @@ public class Enemy_hide : MonoBehaviour
     {
         timeOver();
         StartCoroutine(lightFlicker());
-
     }
 
     void timeOver()
@@ -35,6 +41,8 @@ public class Enemy_hide : MonoBehaviour
         TimeStart = Mathf.RoundToInt(countdown.timeStart);
         if (TimeStart == 0)
         {
+            openVent.SetActive(true);
+            closeVent.SetActive(false);
             showEnemy();
         }
     }
@@ -51,7 +59,7 @@ public class Enemy_hide : MonoBehaviour
         light2D.intensity = monsterLight;
         bc.enabled = true;
         mysprite.enabled = true;
-        tf.position = new Vector3(7.76f, 3.5f, 0);
+        tf.position = new Vector3(5.87f, 1.2f, 0);
     }
 
     IEnumerator lightFlicker() //play around with this to change flicker times and stuff

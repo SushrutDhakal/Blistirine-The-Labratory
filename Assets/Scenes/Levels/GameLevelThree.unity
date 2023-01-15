@@ -2757,9 +2757,9 @@ GameObject:
   - component: {fileID: 258462205}
   - component: {fileID: 258462204}
   - component: {fileID: 258462203}
-  - component: {fileID: 258462209}
   - component: {fileID: 258462210}
   - component: {fileID: 258462211}
+  - component: {fileID: 258462213}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2920,26 +2920,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &258462209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258462202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ed951f427ad394cb99296dc638e955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  light2D: {fileID: 944881034}
-  mysprite: {fileID: 258462207}
-  countdown: {fileID: 258462210}
-  tf: {fileID: 258462208}
-  bc: {fileID: 258462205}
-  monsterAlive: 0
-  openVent: {fileID: 28248283}
-  closeVent: {fileID: 676773487}
 --- !u!114 &258462210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2952,8 +2932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 40
-  monster: {fileID: 258462209}
+  timeStart: 5
+  monster: {fileID: 0}
   textBox: {fileID: 1497680950}
 --- !u!114 &258462211
 MonoBehaviour:
@@ -2968,6 +2948,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lgt2D: {fileID: 944881034}
+--- !u!114 &258462213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258462202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830d9937d8c64724d9ccc419dadc257a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2D: {fileID: 944881034}
+  mysprite: {fileID: 258462207}
+  countdown: {fileID: 258462210}
+  tf: {fileID: 258462208}
+  bc: {fileID: 258462205}
+  monsterAlive: 0
 --- !u!1 &262611477
 GameObject:
   m_ObjectHideFlags: 0
