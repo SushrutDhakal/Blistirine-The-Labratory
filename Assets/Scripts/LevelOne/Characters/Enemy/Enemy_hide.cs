@@ -10,7 +10,7 @@ public class Enemy_hide : MonoBehaviour
     public Transform tf;
     public BoxCollider2D bc;
     public bool monsterAlive = false;
-    public GameObject openVent, closeVent; 
+    public GameObject openVent, closeVent;
     int TimeStart;
 
     float defaultLight = 0.6f;
@@ -18,7 +18,7 @@ public class Enemy_hide : MonoBehaviour
     float midwayLight = 0.37f;
 
     float x;
-    float y; 
+    float y;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,11 @@ public class Enemy_hide : MonoBehaviour
             closeVent.SetActive(false);
             showEnemy();
         }
+
+        if (TimeStart > 0)
+        {
+            hideEnemy();
+        }
     }
 
     void hideEnemy()
@@ -64,7 +69,8 @@ public class Enemy_hide : MonoBehaviour
 
     IEnumerator lightFlicker() //play around with this to change flicker times and stuff
     {
-        if (countdown.timeStart > 0 && countdown.timeStart < 1f) { 
+        if (countdown.timeStart > 0 && countdown.timeStart < 1f)
+        {
             yield return new WaitForSeconds(.5f); //delay 
             light2D.intensity = midwayLight;
             yield return new WaitForSeconds(.5f);

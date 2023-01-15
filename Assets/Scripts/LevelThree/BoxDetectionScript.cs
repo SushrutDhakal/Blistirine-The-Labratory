@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BoxDetectionScript : MonoBehaviour
 {
+    public GameObject wirematch;
     void Start ()
     {
-        if (Countdown.resumeData)
-        {
-            Destroy(this);
-        }
+        wirematch.SetActive(false);
 
     }
 
@@ -18,7 +16,7 @@ public class BoxDetectionScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene("WireMatch");
+            wirematch.SetActive(true);
         }
     }
 }
