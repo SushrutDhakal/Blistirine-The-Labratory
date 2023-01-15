@@ -9,6 +9,9 @@ TagManager:
   - Timer
   - PuzzleTable
   - box
+  - lava
+  - bullet
+  - normalPlayer
   layers:
   - Default
   - TransparentFX

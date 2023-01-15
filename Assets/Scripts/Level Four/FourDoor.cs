@@ -18,7 +18,7 @@ public class FourDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && escape) //colliding with player 
         {
-            SceneManager.LoadScene(sceneName: "MainMenu");
+            SceneManager.LoadScene(sceneName: "PreBossFight");
         }
     }
 }
