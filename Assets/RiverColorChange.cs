@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class RiverColorChange : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject River;
+    public AudioSource scream;
+    
     void Start()
     {
-        
+        StartCoroutine(ColorChange());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ColorChange ()
     {
-        
+        yield return new WaitForSeconds(11.3f);
+        River.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+        scream.Play();
     }
 }
