@@ -6,6 +6,7 @@ using UnityEngine;
 public class CollisionDectector : MonoBehaviour
 {
     HealthManager changehealth;
+    public AudioSource damage;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class CollisionDectector : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             changehealth.TakeDamage(0.8f);
+            damage.Play();
         }
     }
 }

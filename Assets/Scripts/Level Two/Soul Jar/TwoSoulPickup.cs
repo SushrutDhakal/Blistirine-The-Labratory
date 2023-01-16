@@ -10,6 +10,8 @@ public class TwoSoulPickup : MonoBehaviour
     public GameObject soulButton, soulMessage;
     public openBook key;
 
+    public AudioSource soulCollected;
+
     [SerializeField]
     private GameObject noKeycardText;
 
@@ -43,6 +45,7 @@ public class TwoSoulPickup : MonoBehaviour
                         inventory.isFull[0] = true;
                         hasSoul = true;
                         Instantiate(soulButton, inventory.slots[0].transform, false);
+                        soulCollected.Play();
                         Destroy(gameObject);
                     }
                 }

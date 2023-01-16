@@ -10,6 +10,8 @@ public class FourSoul : MonoBehaviour
     public GameObject soulButton, soulMessage, noLever;
     public pullLever key;
 
+    public AudioSource SoulCollected;
+
     public bool hasKeycard = false;
     public bool gotSoul = false;
     private bool hasLever;
@@ -41,6 +43,7 @@ public class FourSoul : MonoBehaviour
                         inventory.isFull[0] = true;
                         gotSoul = true;
                         Instantiate(soulButton, inventory.slots[0].transform, false);
+                        SoulCollected.Play();
                         Destroy(gameObject);
                     }
                 }

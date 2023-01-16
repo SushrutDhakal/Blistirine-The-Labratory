@@ -8,6 +8,7 @@ public class SoulPickup : MonoBehaviour
 {
     private SoulInv inventory;
     public GameObject soulButton, keypad;
+    public AudioSource pickUp;
     [SerializeField] private TextMeshProUGUI Ans;
 
     public bool hasKey = false;
@@ -41,6 +42,7 @@ public class SoulPickup : MonoBehaviour
                         inventory.isFull[0] = true;
                         hasKey = true;
                         Instantiate(soulButton, inventory.slots[0].transform, false);
+                        pickUp.Play();
                         Destroy(gameObject);
                     }
                 }

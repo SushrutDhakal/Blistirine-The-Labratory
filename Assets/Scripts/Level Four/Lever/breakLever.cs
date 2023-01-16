@@ -7,6 +7,7 @@ public class breakLever : MonoBehaviour
     public LeverColllider lever;
     public hammerPressure hammer;
     public GameObject noHammer, broke, glassLever, noGlassLever;
+    public AudioSource Broken;
 
     void OnMouseDown()
     {
@@ -22,6 +23,7 @@ public class breakLever : MonoBehaviour
             {
                 glassLever.SetActive(false);
                 noGlassLever.gameObject.SetActive(true);
+                Broken.Play();
             }
         }     
     }
