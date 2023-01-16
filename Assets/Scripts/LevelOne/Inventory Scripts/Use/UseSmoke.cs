@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class UseSmoke : MonoBehaviour
 {
     public GameObject effect;

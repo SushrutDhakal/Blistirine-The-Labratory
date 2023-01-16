@@ -21,7 +21,6 @@ public class blocker : MonoBehaviour
     {
         if (plateOne.openOne && plateTwo.openTwo)
         {
-            Debug.Log(timeStart);
             timeStart -= Time.deltaTime;
             if (timeStart > 0 )
             {

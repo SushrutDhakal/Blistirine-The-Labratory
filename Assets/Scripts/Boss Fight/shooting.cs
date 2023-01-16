@@ -42,9 +42,11 @@ public class shooting : MonoBehaviour
 
     IEnumerator reload()
     {
-        canShoot = false;
-        yield return new WaitForSeconds(3);
+        canShoot = false;        
         ammo = 30;
+        textBox.text = ammo + "/30";
+        yield return new WaitForSeconds(3);
+
         canShoot = true;
     }
 }
