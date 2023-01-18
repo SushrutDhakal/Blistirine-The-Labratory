@@ -17,7 +17,7 @@ public class PressureOne : MonoBehaviour
     {
         if (other.CompareTag("Player")) //colliding with player 
         {
-            a.timeStart = 5;
+            a.timeStart = 3;
             SoundManager.PlaySound("pressure");
             openOne = true;
             playerPressOne = true;
@@ -25,7 +25,7 @@ public class PressureOne : MonoBehaviour
 
         if (other.CompareTag("box"))
         {
-            a.timeStart = 5;
+            a.timeStart = 3;
             SoundManager.PlaySound("pressure");
             openOne = true;
             boxPressOne = true;

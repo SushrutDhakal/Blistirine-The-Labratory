@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip syringeSound, smokeSound, freezeSound, timeSound, puzzleMove, pressureSound, alarmSound;
+    public static AudioClip syringeSound, smokeSound, freezeSound, timeSound, puzzleMove, pressureSound, alarmSound, reloadSound, shootSound, pinSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -17,6 +17,9 @@ public class SoundManager : MonoBehaviour
         puzzleMove = Resources.Load<AudioClip>("puzzleMove");
         pressureSound = Resources.Load<AudioClip>("pressure");
         alarmSound = Resources.Load<AudioClip>("alarm");
+        reloadSound = Resources.Load<AudioClip>("reload");
+        shootSound = Resources.Load<AudioClip>("shoot");
+        pinSound = Resources.Load<AudioClip>("pin");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -51,6 +54,18 @@ public class SoundManager : MonoBehaviour
 
             case "alarm":
                 audioSrc.PlayOneShot(alarmSound);
+                break;
+
+            case "reload":
+                audioSrc.PlayOneShot(reloadSound);
+                break;
+
+            case "shoot":
+                audioSrc.PlayOneShot(shootSound);
+                break;
+
+            case "pin":
+                audioSrc.PlayOneShot(pinSound);
                 break;
         }
     }

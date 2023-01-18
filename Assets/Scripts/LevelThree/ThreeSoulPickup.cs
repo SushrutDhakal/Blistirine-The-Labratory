@@ -7,9 +7,17 @@ using TMPro;
 public class ThreeSoulPickup : MonoBehaviour
 {
     private SoulInv inventory;
-    public GameObject soulButton;
+    public GameObject soulButton, soulMessage;
+    public AudioSource pickUp;
+    public bool hasKey = false;
+    public bool wireFixed;
 
-    public bool hasSoul = false;
+    public MainWire fixd;
+
+    private void Update()
+    {
+        wireFixed = fixd.wiresFixed;
+    }
 
     private void Start()
     {
@@ -21,18 +29,32 @@ public class ThreeSoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") //colliding with player 
         {
+            soulMessage.SetActive(true);
 
-            if (Input.GetKey("e"))
+            if (wireFixed) 
             {
-                if (inventory.isFull[0] == false)
+                if (Input.GetKey("e"))
                 {
-                    //add item
-                    inventory.isFull[0] = true;
-                    hasSoul = true;
-                    Instantiate(soulButton, inventory.slots[0].transform, false);
-                    Destroy(gameObject);
+                    if (inventory.isFull[0] == false)
+                    {
+                        //add item
+                        inventory.isFull[0] = true;
+                        hasKey = true;
+                        Instantiate(soulButton, inventory.slots[0].transform, false);
+                        pickUp.Play();
+                        Destroy(gameObject);
+                    }
                 }
             }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            soulMessage.SetActive(false);
+            // Hide the text element
         }
     }
 }

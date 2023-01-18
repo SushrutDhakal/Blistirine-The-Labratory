@@ -12,7 +12,7 @@ public class blocker : MonoBehaviour
 
     public hammerPressure hammer;
 
-    public float timeStart = 5; //how long they have after pressure plate is touched to escape 
+    public float timeStart = 3; //how long they have after pressure plate is touched to escape 
 
     private bool canOpen;
 

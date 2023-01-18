@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 10486f3a800341f44839053775908a36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Instructions.unity
     guid: d34be379bf1e3f6488074bab5c8a077c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscene.unity
     guid: 778d0e23a51b3b64a94db2a217897080
   - enabled: 1
@@ -38,12 +38,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Puzzles/WireMatch.unity
     guid: 13c0583eecc1fa946bfc26144b09fe81
-  - enabled: 1
-    path: Assets/Scenes/Levels/GameLevelThree.unity
-    guid: 542f9ef894a396b478b355bd91cae7cd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/getting Armour Scene.unity
     guid: 095cbd1b5256b6045adbe49eef4b9d8c
@@ -59,4 +59,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ConcludingCutscene.unity
     guid: ad23f3352cd7de9438e8d2132d40a3f4
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: a20a333f672801d4d9703047f5a90075
+  - enabled: 1
+    path: Assets/Scenes/Levels/GameLevelThree.unity
+    guid: baeee7cbadf2dcd43876d0338f707f17
   m_configObjects: {}

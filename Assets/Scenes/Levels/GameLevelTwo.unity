@@ -7898,7 +7898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shelfOpened: {fileID: 91928368}
-  book: {fileID: 594911869}
   tooFar: {fileID: 54275230}
   touch: {fileID: 48997700}
 --- !u!61 &524919285

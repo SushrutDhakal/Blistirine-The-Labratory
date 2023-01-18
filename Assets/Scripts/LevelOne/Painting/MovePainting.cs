@@ -5,7 +5,17 @@ using UnityEngine;
 public class MovePainting : MonoBehaviour
 {
     public GameObject painting, key;
-    public bool hasDrawerKey; 
+    public bool hasDrawerKey;
+    private bool canRotate = true;
+
+    void Update()
+    {
+        if (transform.localRotation.eulerAngles.z == 90) 
+        {
+            canRotate = false;
+        }
+
+    }
 
 
     void Start()
@@ -16,7 +26,11 @@ public class MovePainting : MonoBehaviour
     }
     public void Use()
     {
-        painting.SetActive(false);
+        if (canRotate) 
+        {
+            transform.Rotate(0f, 0f, 10f);
+        }
+
         key.SetActive(true);
         hasDrawerKey = true;
     }

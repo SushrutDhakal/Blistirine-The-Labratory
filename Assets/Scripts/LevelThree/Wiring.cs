@@ -29,7 +29,7 @@ public class Wiring : MonoBehaviour
                 
                 if (transform.parent.name.Equals (collider.transform.parent.name))
                 {
-                    //Instance.CountChange(1);
+                    MainWire.Instance.CountChange(1);
                     collider.GetComponent<Wiring>()?.Finish();
                     Finish();
                 }
@@ -38,8 +38,7 @@ public class Wiring : MonoBehaviour
             }
         }
 
-        UpdateWire(newPosition);
-        
+        UpdateWire(newPosition);   
     }
 
     void Finish()

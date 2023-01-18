@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class drawer : MonoBehaviour
 {
-    public GameObject opened, lockedMessage, tooFar;
+    public GameObject opened, lockedMessage, tooFar, painting;
     public MovePainting drawerKey;
     public drawerCollision touch;
 
@@ -26,6 +26,7 @@ public class drawer : MonoBehaviour
         if (drawerKey.hasDrawerKey && collide)
         {
             opened.SetActive(true);
+            painting.SetActive(false);
         }
 
         if (!drawerKey.hasDrawerKey && collide)

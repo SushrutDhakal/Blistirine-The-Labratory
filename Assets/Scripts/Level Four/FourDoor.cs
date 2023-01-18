@@ -11,7 +11,6 @@ public class FourDoor : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(escape);
         escape = soul.gotSoul;
 
     }

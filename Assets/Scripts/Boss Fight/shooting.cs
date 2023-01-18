@@ -29,12 +29,14 @@ public class shooting : MonoBehaviour
 
         if (ammo == 0)
         {
+            SoundManager.PlaySound("reload");
             StartCoroutine(reload());
         }
     }
 
     void Shoot()
     {
+        SoundManager.PlaySound("shoot");
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * BulletForce, ForceMode2D.Impulse);
@@ -46,7 +48,6 @@ public class shooting : MonoBehaviour
         ammo = 30;
         textBox.text = ammo + "/30";
         yield return new WaitForSeconds(3);
-
         canShoot = true;
     }
 }

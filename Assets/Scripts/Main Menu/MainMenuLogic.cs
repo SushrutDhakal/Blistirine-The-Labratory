@@ -15,9 +15,9 @@ public class MainMenuLogic : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
-    public void instructionsButton()
+    public void tutorialButton()
     {
-        SceneManager.LoadScene("Instructions");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void leaveGame()

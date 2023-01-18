@@ -20,7 +20,6 @@ public class ShelfCollision : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             touchingShelf = false;
-            
         }
     }
 

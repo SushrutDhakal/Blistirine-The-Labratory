@@ -21,7 +21,14 @@ public class Keypad : MonoBehaviour
 
     public void Number(int number)
     {
-        Ans.text += number.ToString();
+        if (Ans.text.Length < 4)
+        {
+            SoundManager.PlaySound("pin");
+            Ans.text += number.ToString();
+        }
+
+        else { Ans.text = ""; }
+        
     }
 
     public void compareGuess()

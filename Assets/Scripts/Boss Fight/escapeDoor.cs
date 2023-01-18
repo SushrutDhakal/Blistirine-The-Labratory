@@ -37,7 +37,7 @@ public class escapeDoor : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        SceneManager.LoadScene(sceneName: "MainMenu");
+        SceneManager.LoadScene(sceneName: "ConcludingCutscene");
     }
 
 

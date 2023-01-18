@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class shelf : MonoBehaviour
 {
-    public GameObject shelfOpened, book, tooFar;
+    public GameObject shelfOpened, tooFar;
     public ShelfCollision touch;
     private bool collide;
 

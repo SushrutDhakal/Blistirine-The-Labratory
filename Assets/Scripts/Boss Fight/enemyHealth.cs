@@ -10,7 +10,7 @@ public class enemyHealth : MonoBehaviour
     public float healthAmount = 100f;
 
     public bool enemyAlive = true;
-    public GameObject bossEnemy, lava, rock, ammo;
+    public GameObject bossEnemy, lava, rock, ammo, deadText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class enemyHealth : MonoBehaviour
     {//rgb
         if (healthAmount <= 0)
         {
+            deadText.SetActive(true);
             lava.SetActive(false);
             ammo.SetActive(false);
             rock.SetActive(true);
