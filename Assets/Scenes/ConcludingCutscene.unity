@@ -865,7 +865,7 @@ MonoBehaviour:
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.02
-  characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
+  characterSprite: {fileID: 21300000, guid: aae645189d540af4d8b63ad41de9e08f, type: 3}
   imageHolder: {fileID: 747040502}
 --- !u!114 &323573021
 MonoBehaviour:
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aae645189d540af4d8b63ad41de9e08f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2232,7 +2232,7 @@ SpriteRenderer:
   m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &753452059
