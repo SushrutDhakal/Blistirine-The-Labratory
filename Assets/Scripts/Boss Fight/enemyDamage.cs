@@ -15,7 +15,7 @@ public class enemyDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            changehealth.TakeDamage(.1f);
+            changehealth.TakeDamage(1f);
         }
     }
 }
