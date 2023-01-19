@@ -42,12 +42,12 @@ public class blocker : MonoBehaviour
             canOpen = false;
         }
 
+        if (canOpen || hammer.gotHammer) {wall.SetActive(false); }
+        if (!canOpen) {wall.SetActive(true); }
+
         if (hammer.gotHammer)
         {
             wall.SetActive(false);
         }
-
-        if (canOpen) {wall.SetActive(false); }
-        if (!canOpen) { wall.SetActive(true); }
     }
 }

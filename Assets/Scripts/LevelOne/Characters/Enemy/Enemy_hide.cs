@@ -60,7 +60,9 @@ public class Enemy_hide : MonoBehaviour
         light2D.intensity = monsterLight;
         bc.enabled = true;
         mysprite.enabled = true;
-        tf.position = new Vector3(7.76f, 3.5f, 0);
+        tf.position = new Vector3(5.87f, 1.2f, 0);
+        openVent.SetActive(true); 
+        closeVent.SetActive(false);
     }
 
     IEnumerator lightFlicker() //play around with this to change flicker times and stuff

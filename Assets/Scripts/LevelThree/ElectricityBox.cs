@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ElectricityBox : MonoBehaviour
 {
-    public GameObject wires, wall1, wall2, collectables, canvas, timer, npc, bookshelf;
+    public GameObject wires, wall1, wall2, collectables, canvas, timer, npc, bookshelf, monster;
     public UnityEngine.Rendering.Universal.Light2D light2D;
 
     private bool done;
+    private bool enemy; 
 
     public MainWire fixd;
+    public Enemy_hide hide;
 
     private void Update()
     {
         done = fixd.wiresFixed;
+        enemy = hide.monsterAlive; 
     }
 
 
@@ -30,6 +33,11 @@ public class ElectricityBox : MonoBehaviour
             npc.SetActive(false);
             collectables.SetActive(false);
             bookshelf.SetActive(false);
+
+            if (enemy)
+            {
+                monster.SetActive(false);
+            }
         }
     }
 
@@ -51,6 +59,11 @@ public class ElectricityBox : MonoBehaviour
             npc.SetActive(true);
             collectables.SetActive(true);
             bookshelf.SetActive(true);
+
+            if (enemy)
+            {
+                monster.SetActive(true);
+            }
         }
     }
 }

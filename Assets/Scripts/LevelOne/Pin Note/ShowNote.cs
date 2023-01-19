@@ -7,7 +7,7 @@ using TMPro;
 public class ShowNote : MonoBehaviour
 {
     public GameObject Note;
-    public GameObject drawerOpen;
+    public GameObject drawerOpen, playerLight;
 
     [SerializeField]
     public TMP_Text hint;
@@ -16,7 +16,7 @@ public class ShowNote : MonoBehaviour
     static string hintOne = "I am a four-digit code\r\nThat you must solve to progress\r\nMy second digit is three times my third\r\nTwo of my digits are the same\r\nTwo of my digits is a factor of 49\r\nAll of my digits are odd\r\nThe sum of my digits is 18";
 
     //6488
-    static string hintTwo = "I am a four-digit code\r\nThat you must solve to progress\r\nMy first letter is hex in Greek\r\nMy second digit is half of my third and last\r\nAll of my digits are even\r\nMy second digit is two less than my fourth\r\nThe sum of my digits is 26";
+    static string hintTwo = "I am a four-digit code\r\nThat you must solve to progress\r\nMy first letter is hex in Greek\r\nMy second digit is half of my third and last\r\nAll of my digits are even\r\nMy second digit is four less than my fourth\r\nThe sum of my digits is 26";
 
     //3481
     static string hintThree = "I am a four-digit code\r\nThat you must solve to progress\r\nMy second digit is a half of my third\r\nMy first digit is three times of my last\r\nMy second and third digits are even\r\nMy last digit is the first odd integer\r\nThe sum of my digits is 16";
@@ -46,6 +46,7 @@ public class ShowNote : MonoBehaviour
         pin = pins[randomHint];
         Debug.Log(pin);
         Note.SetActive(true);
+        playerLight.SetActive(false);
     }
 
 

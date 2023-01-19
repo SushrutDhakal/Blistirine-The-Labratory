@@ -43,6 +43,8 @@ public class ThreeSoulPickup : MonoBehaviour
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         pickUp.Play();
                         Destroy(gameObject);
+
+                        //door animation
                     }
                 }
             }
