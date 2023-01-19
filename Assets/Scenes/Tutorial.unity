@@ -2710,7 +2710,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 616d7b76ed21e024db1db3f7bd7a6dbc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1e9c9497454f299428bc4aa8a26e0d5c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2949,7 +2949,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f79a5c00d37e80d4eb2ead27d394488e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3360,7 +3360,7 @@ SpriteRenderer:
   m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &258462208
@@ -4084,10 +4084,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: But beware, that evil monster has laid out puzzles in each room to keep
-    the souls safe!
+    the souls trapped!
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.03
+  delay: 0.027
   characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 316171979}
 --- !u!114 &312413752
@@ -5274,7 +5274,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce0c32152b7983240b50349ce8701af0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6190,7 +6190,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a26503dbe5af1c46a8203f6a2874119, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8389,8 +8389,7 @@ Transform:
   m_LocalPosition: {x: -605.429, y: -270.11, z: -3.0441356}
   m_LocalScale: {x: 1.3037513, y: 1.3037513, z: 0.14578551}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1066658122}
+  m_Children: []
   m_Father: {fileID: 598254939}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8782,7 +8781,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 762f975e53c74af4bbf7114d43209afb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10843,6 +10842,7 @@ Transform:
   - {fileID: 1078370097}
   - {fileID: 1540247354}
   - {fileID: 643853927}
+  - {fileID: 1066658122}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11783,7 +11783,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b55b150513a23764a9110b759567ca83, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12257,13 +12257,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066658121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.5150166, y: -2.2306461, z: 9.9395275}
+  m_LocalScale: {x: 1.3037513, y: 1.3037513, z: 0.14578551}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 687701693}
-  m_RootOrder: 0
+  m_Father: {fileID: 884257684}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1066658123
 AudioSource:
@@ -12615,7 +12615,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50dfa2e2fefd744418dedf0116ac4768, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13129,8 +13129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebf92a519499948b0435a8b57c73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: The freeze grenade freezes the monster and the clock adds some gives you
-    a little more time!
+  input: 'The freeze grenade freezes the monster and the clock gives you more time
+    before the monster spawns '
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.03
@@ -13380,7 +13380,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f7a2c88b36c2c7c42b443847303a494b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14017,8 +14017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebf92a519499948b0435a8b57c73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: You must get the puzzle to break the soul jar and escape through the door
-    before.
+  input: Each room has a soul jar that can be broken by solving puzzles.
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.03
@@ -14360,7 +14359,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e35592e7565744341b6d702c85a9b38f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14940,7 +14939,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ecf3252c53decc1429f02dd68584a6ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15663,7 +15662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebf92a519499948b0435a8b57c73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I used to work here along time ago before the monster came...
+  input: I used to work here a long time ago before the monster came...
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.03
@@ -19224,7 +19223,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0ba16838572afe3408932c577bf65d94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d4c3328d04243f4e920eb81fe0b2227, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -20628,8 +20627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebf92a519499948b0435a8b57c73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: That's all from me, whenever you are ready to start grab the soul from the
-    jar and leave through the door.
+  input: That's all from me. Whenever you are ready to start, grab the soul from
+    the jar and leave through the door.
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
   delay: 0.03
@@ -20887,7 +20886,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8917fe79e92e5c4194a790332133a57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4b9ad1a4ae2c33640a3d51c3f6875989, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22030,7 +22029,7 @@ MonoBehaviour:
   input: Thank you for coming to the labratory, Agent. We were waiting for you!
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textFont: {fileID: 12800000, guid: 5eedd0c6f99ed0346a2d1d59cb1a91f1, type: 3}
-  delay: 0.03
+  delay: 0.027
   characterSprite: {fileID: 21300000, guid: 9a919da086a7b4b4c807d60d6f3cd34e, type: 3}
   imageHolder: {fileID: 555532805}
 --- !u!114 &2005829023
@@ -22634,7 +22633,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9e2089327fc18684d921109e2ca4d9b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56a1368a0c4aee8469e2c0335cfd0fed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -29,11 +29,12 @@ public class TutorialSoul : MonoBehaviour
             {
                 if (inventory.isFull[0] == false)
                 {
+                    //play sound
+                    pickUp.Play();
                     //add item
                     inventory.isFull[0] = true;
                     hasKey = true;
                     Instantiate(soulButton, inventory.slots[0].transform, false);
-                    pickUp.Play();
                     Destroy(gameObject);
                 }
             }
@@ -45,6 +46,7 @@ public class TutorialSoul : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             soulMessage.SetActive(false);
+            pickUp.Play();
             // Hide the text element
         }
     }
