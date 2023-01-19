@@ -9,6 +9,7 @@ public class FourSoul : MonoBehaviour
     private SoulInv inventory;
     public GameObject soulButton, soulMessage, noLever;
     public pullLever key;
+    public Animator dooranimation;
 
     public AudioSource SoulCollected;
 
@@ -45,6 +46,7 @@ public class FourSoul : MonoBehaviour
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         SoulCollected.Play();
                         Destroy(gameObject);
+                        dooranimation.SetBool("open", true);
                     }
                 }
             }

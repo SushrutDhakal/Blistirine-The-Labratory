@@ -11,6 +11,7 @@ public class ThreeSoulPickup : MonoBehaviour
     public AudioSource pickUp;
     public bool hasKey = false;
     public bool wireFixed;
+    public Animator dooranimation;
 
     public MainWire fixd;
 
@@ -43,7 +44,7 @@ public class ThreeSoulPickup : MonoBehaviour
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         pickUp.Play();
                         Destroy(gameObject);
-
+                        dooranimation.SetBool("open", true);
                         //door animation
                     }
                 }

@@ -1989,6 +1989,7 @@ GameObject:
   - component: {fileID: 164848971}
   - component: {fileID: 164848972}
   - component: {fileID: 164848973}
+  - component: {fileID: 164848974}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2004,8 +2005,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164848968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.54, z: 0}
-  m_LocalScale: {x: 1.5614731, y: 1.5614731, z: 1.5614731}
+  m_LocalPosition: {x: 0, y: 3.57024, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1.5614731}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2089,7 +2090,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.044935167}
+  m_Offset: {x: -0.16454458, y: -2.220583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2100,8 +2101,28 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.04, y: 1.5898703}
+  m_Size: {x: 4.221199, y: 5.941166}
   m_EdgeRadius: 0
+--- !u!95 &164848974
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164848968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 344ee5276acfed84b950369373796378, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &169677074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,8 +2998,8 @@ MonoBehaviour:
   tf: {fileID: 258462208}
   bc: {fileID: 258462205}
   monsterAlive: 0
-  openVent: {fileID: 0}
-  closeVent: {fileID: 0}
+  openVent: {fileID: 1196877306}
+  closeVent: {fileID: 466762648}
 --- !u!114 &258462210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10080,6 +10101,7 @@ MonoBehaviour:
   soulMessage: {fileID: 1280085786}
   noLever: {fileID: 737191629}
   key: {fileID: 1409456658}
+  dooranimation: {fileID: 164848974}
   SoulCollected: {fileID: 1156066698}
   hasKeycard: 0
   gotSoul: 0
@@ -11013,7 +11035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049672699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -645.36, y: -359.97, z: 0}
+  m_LocalPosition: {x: -643.72, y: -363.2, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12988,7 +13010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259700961}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -645.45, y: -362.32, z: 0}
+  m_LocalPosition: {x: -646.61, y: -362.11, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18198,7 +18220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807206589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -641.22, y: -364.06, z: 0}
+  m_LocalPosition: {x: -637.09, y: -364.9, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
