@@ -10,6 +10,8 @@ public class TutorialSoul : MonoBehaviour
     public GameObject soulButton;
     public AudioSource pickUp;
     public GameObject soulMessage;
+    public Animator dooranimation;
+
 
 
     public bool hasKey = false;
@@ -36,6 +38,7 @@ public class TutorialSoul : MonoBehaviour
                     hasKey = true;
                     Instantiate(soulButton, inventory.slots[0].transform, false);
                     Destroy(gameObject);
+                    dooranimation.SetBool("open", true);
                 }
             }
     }

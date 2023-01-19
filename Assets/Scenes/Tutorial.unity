@@ -2303,6 +2303,7 @@ GameObject:
   - component: {fileID: 164848971}
   - component: {fileID: 164848974}
   - component: {fileID: 164848973}
+  - component: {fileID: 164848975}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2318,9 +2319,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164848968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.565, z: 0}
-  m_LocalScale: {x: 1.572, y: 1.572, z: 1.572}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 3.57024, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -2345,7 +2346,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2390,7 +2391,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03023681}
+  m_Offset: {x: 0.024917126, y: -2.2104197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2401,7 +2402,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.04, y: 1.5604737}
+  m_Size: {x: 5.2757816, y: 5.9208393}
   m_EdgeRadius: 0
 --- !u!114 &164848974
 MonoBehaviour:
@@ -2416,6 +2417,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickup: {fileID: 687701699}
+--- !u!95 &164848975
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164848968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 344ee5276acfed84b950369373796378, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &174122219
 GameObject:
   m_ObjectHideFlags: 0
@@ -8486,6 +8507,7 @@ MonoBehaviour:
   soulButton: {fileID: 7232800246161371114, guid: 0edb890553d437847aa69fb2cb4bf164, type: 3}
   pickUp: {fileID: 1066658123}
   soulMessage: {fileID: 2079087791}
+  dooranimation: {fileID: 164848975}
   hasKey: 0
 --- !u!1 &688827582
 GameObject:
