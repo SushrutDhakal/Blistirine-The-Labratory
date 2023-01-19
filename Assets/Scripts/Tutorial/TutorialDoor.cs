@@ -15,6 +15,7 @@ public class TutorialDoor : MonoBehaviour
 
             if (pickup.hasKey == true)
             {
+                NPCDetection.DialogueComplete = false;
                 SceneManager.LoadScene(sceneName: "GameLevelOne");
             }
         }

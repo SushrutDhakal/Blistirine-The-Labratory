@@ -11,6 +11,7 @@ public class LevelTwoDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && soul.hasSoul == true) //colliding with player 
         {
+            NPCDetection.DialogueComplete = false;
             SceneManager.LoadScene(sceneName: "GameLevelThree");
         }
     }

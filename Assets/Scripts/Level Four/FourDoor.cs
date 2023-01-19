@@ -18,6 +18,7 @@ public class FourDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && escape) //colliding with player 
         {
+            NPCDetection.DialogueComplete = false;
             SceneManager.LoadScene(sceneName: "PreBossFight");
         }
     }

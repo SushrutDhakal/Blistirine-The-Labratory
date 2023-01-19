@@ -11,6 +11,7 @@ public class ThreeDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && pickup.hasKey == true) //colliding with player 
         {
+            NPCDetection.DialogueComplete = false;
             SceneManager.LoadScene(sceneName: "GameLevelFour");
         }
     }
