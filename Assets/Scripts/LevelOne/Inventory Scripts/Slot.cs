@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
+    //Calling the player inventory 
     private Inventory inventory;
-    public int index;
+    public int index; //inventory index 
     private static Inventory savedData;
 
+
+    //Get inventory 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
+    //Save inventory and update it 
     private void Update()
     {
 
@@ -32,6 +36,7 @@ public class Slot : MonoBehaviour
         }
     }
 
+    //Function to drop item on ground 
     public void DropItem()
     {
         foreach (Transform child in transform)

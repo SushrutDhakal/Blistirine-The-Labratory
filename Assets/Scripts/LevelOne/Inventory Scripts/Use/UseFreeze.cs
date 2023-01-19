@@ -11,6 +11,7 @@ public class UseFreeze : MonoBehaviour
         monster = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Tracker>();
     }
 
+    //Freeze enemy and destroy gameobject 
     public void Use()
     {
         SoundManager.PlaySound("freeze");

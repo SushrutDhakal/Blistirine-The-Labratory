@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tracker : MonoBehaviour
 {
+
+    //Intializing all required variables
     public float moveSpeed = 5f;
     public Transform player;
     public Rigidbody2D rb;
@@ -16,7 +18,7 @@ public class Tracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.freezeRotation = true;
+        rb.freezeRotation = true; //freeze enemy rotation
     }
 
     // Update is called once per frame
@@ -26,10 +28,13 @@ public class Tracker : MonoBehaviour
         float anim_x = 0f;
         float anim_y = 0f;
 
-        Vector3 direction = player.position - transform.position;
+
+        //track players movement and follow it 
+        Vector3 direction = player.position - transform.position; 
         direction.Normalize();
         movement = direction;
 
+        //Change animation based on direction it is facing 
         if (movement.x < 0)
         {
             mysprite.flipX = true;
@@ -62,9 +67,11 @@ public class Tracker : MonoBehaviour
             }
         }
 
+        //Calling animation
         myanimation.SetFloat("Vertical", anim_y);
         myanimation.SetFloat("Horizontal", anim_x);
 
+        //When freeze grenade is used 
         if (freeze == true)
         {
             gameObject.GetComponent<Animator>().enabled = false;
@@ -72,11 +79,13 @@ public class Tracker : MonoBehaviour
         }
     }
 
+    //
     private void FixedUpdate()
     {
         StartCoroutine(moveCharacter(movement));
     }
 
+    //When monster is frozen 
     public void freezeMonster()
     {
         freeze = true;
@@ -86,6 +95,7 @@ public class Tracker : MonoBehaviour
     {
         if (freeze == false)
         {
+            // Moving enemy based on monster position
             gameObject.GetComponent<Animator>().enabled = true;
             rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
         }

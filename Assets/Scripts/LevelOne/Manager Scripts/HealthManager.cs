@@ -6,57 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
+
     public Image healthBar;
-    public float healthAmount = 100f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public float healthAmount = 100f; //full heakth 
 
     // Update is called once per frame
     void Update()
-    {//rgb
+    {
+        //If the player dies, go to the game over scene 
         if (healthAmount <= 0)
         {
             SceneManager.LoadScene("GameOver"); //goes to gameover screen
         }
 
-        /*if (0 < healthAmount && healthAmount < 20)
-        {
-            healthBar.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-        }
-
-        if (20 < healthAmount && healthAmount < 40)
-        {
-            healthBar.color = new Color(1.0f, 0.5f, 0.0f, 1.0f);
-        }
-
-        if (40 < healthAmount && healthAmount < 60)
-        {
-            healthBar.color = new Color(1.0f, 1.0f, 0.0f, 1.0f);
-        }
-
-        if (60 < healthAmount && healthAmount < 80)
-        {
-            healthBar.color = new Color(0.5f, 1.0f, 0.0f, 1.0f);
-        }
-
-        if (80 < healthAmount && healthAmount < 100)
-        {
-            healthBar.color = new Color(0.0f, 1.0f, 0.0f, 1.0f);//green
-        } */
-
     }
 
-    public void TakeDamage(float damage)
+    //Function to take damage from the player and update it 
+    public void TakeDamage (float damage)
     {
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100f;
     }
 
-    public void Heal(float healingAmount)
+    //Called when player uses syringe to heal themselves 
+    public void Heal (float healingAmount)
     {
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);//health bar range

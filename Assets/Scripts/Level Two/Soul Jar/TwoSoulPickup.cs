@@ -34,7 +34,6 @@ public class TwoSoulPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") //colliding with player 
         {
-
             if (hasKeycard)
             {
                 soulMessage.SetActive(true);

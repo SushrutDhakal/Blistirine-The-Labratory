@@ -13,6 +13,7 @@ public class UseHealth : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    //Use syringe to give player 20 health points and destroy itself after 
     public void Use()
     {
         SoundManager.PlaySound("syringe");

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    //Required variables 
     public static AudioClip syringeSound, smokeSound, freezeSound, timeSound, puzzleMove, pressureSound, alarmSound, reloadSound, shootSound, pinSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
+        //All sounds mapped 
         syringeSound = Resources.Load<AudioClip>("syringe");
         smokeSound = Resources.Load<AudioClip>("smoke");
         freezeSound = Resources.Load<AudioClip>("freeze");
@@ -24,6 +26,7 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
+    //Switch cases that can be called in any script using a string input 
     public static void PlaySound(string clip)
     { 
         switch (clip)

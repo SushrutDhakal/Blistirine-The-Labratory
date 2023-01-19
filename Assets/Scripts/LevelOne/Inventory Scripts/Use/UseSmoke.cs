@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class UseSmoke : MonoBehaviour
 {
     public GameObject effect;
@@ -14,6 +13,7 @@ public class UseSmoke : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    //Create the smoke effect 
     public void Use()
     {
         SoundManager.PlaySound("smoke");
