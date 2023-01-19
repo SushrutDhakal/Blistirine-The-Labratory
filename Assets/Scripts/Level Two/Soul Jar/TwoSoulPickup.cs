@@ -9,6 +9,7 @@ public class TwoSoulPickup : MonoBehaviour
     private SoulInv inventory;
     public GameObject soulButton, soulMessage;
     public openBook key;
+    public Animator dooranimation;
 
     public AudioSource soulCollected;
 
@@ -47,6 +48,10 @@ public class TwoSoulPickup : MonoBehaviour
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         soulCollected.Play();
                         Destroy(gameObject);
+
+                        dooranimation.SetBool("open", true);
+
+                        //here
                     }
                 }
             }

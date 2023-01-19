@@ -2240,6 +2240,7 @@ GameObject:
   - component: {fileID: 164848971}
   - component: {fileID: 164848974}
   - component: {fileID: 164848973}
+  - component: {fileID: 164848975}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2255,8 +2256,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164848968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.565, z: 0}
-  m_LocalScale: {x: 1.572, y: 1.572, z: 1.572}
+  m_LocalPosition: {x: 0, y: 3.57024, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1.572}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2327,7 +2328,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03417179}
+  m_Offset: {x: 0.024296522, y: -2.2451482}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2338,7 +2339,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.04, y: 1.5683436}
+  m_Size: {x: 4.5872808, y: 5.9902964}
   m_EdgeRadius: 0
 --- !u!114 &164848974
 MonoBehaviour:
@@ -2353,6 +2354,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickup: {fileID: 687701699}
+--- !u!95 &164848975
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164848968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 344ee5276acfed84b950369373796378, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &167843959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2922019950202721695, guid: 801d1f900d128934ca22706ecca13522, type: 3}
@@ -3230,7 +3251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cd697c431b4804f94b2d6c1527fdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 1
+  timeStart: 40
   monster: {fileID: 258462209}
   textBox: {fileID: 1497680950}
 --- !u!1 &262611477
@@ -8196,6 +8217,7 @@ MonoBehaviour:
   pickUp: {fileID: 1066658123}
   hasKey: 0
   wireFixed: 0
+  dooranimation: {fileID: 164848975}
   fixd: {fileID: 2124250545}
 --- !u!1 &688827582
 GameObject:
@@ -10759,7 +10781,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.01
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000

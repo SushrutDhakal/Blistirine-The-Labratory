@@ -10,6 +10,7 @@ public class SoulPickup : MonoBehaviour
     public GameObject soulButton, keypad;
     public AudioSource pickUp;
     [SerializeField] private TextMeshProUGUI Ans;
+    public Animator dooranimation;
 
     public bool hasKey = false;
     public Keypad guess;
@@ -44,6 +45,7 @@ public class SoulPickup : MonoBehaviour
                         Instantiate(soulButton, inventory.slots[0].transform, false);
                         pickUp.Play();
                         Destroy(gameObject);
+                        dooranimation.SetBool("open", true);
                     }
                 }
             }
